@@ -59,9 +59,9 @@ func _update_inputs() -> void:
 		_direction = Vector2.ZERO
 
 func _onAttack():
-	PlayerVariables.trackedData.Attacks.Number+= 1
-	var AttackNumber = PlayerVariables.trackedData.Attacks.Number
-	PlayerVariables.trackedData.Attacks.HitRate =  float(PlayerVariables.trackedData.timesEnnemiesGotHit)/AttackNumber if AttackNumber!= 0 else 0
+	PlayerVariables.trackedData.attacks.Number+= 1
+	var AttackNumber = PlayerVariables.trackedData.attacks.Number
+	PlayerVariables.trackedData.attacks.HitRate =  float(PlayerVariables.trackedData.timesEnnemiesGotHit)/AttackNumber if AttackNumber!= 0 else 0
 
 func _set_state(state : STATE) -> void:
 	super(state)

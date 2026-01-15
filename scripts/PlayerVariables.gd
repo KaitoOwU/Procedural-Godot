@@ -7,7 +7,7 @@ var trackedData = {
 	timesPlayerGotHit = 0,
 	timesEnnemiesGotHit = 0,
 	currentRoom = "Room1",
-	Attacks = {
+	attacks = {
 		Number = 0,
 		HitRate = 0,
 	},
