@@ -8,8 +8,8 @@ var trackedData = {
 	timesEnnemiesGotHit = 0,
 	currentRoom = "Room1",
 	attacks = {
-		Number = 0,
-		HitRate = 0,
+		number = 0,
+		hitRate = 0,
 	},
 	pickupsObtained = {
 		hearts = 0,
