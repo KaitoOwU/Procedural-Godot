@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chso045indd0u"]
+
+[ext_resource type="Script" uid="uid://bupauncyrdg3t" path="res://room_layout_generator.gd" id="1_6nvwu"]
+[ext_resource type="TileSet" uid="uid://b3ge8mk0di6hw" path="res://resources/tilesets/room_tile_set.tres" id="2_sad45"]
+
+[node name="room_tree_generator" type="Node2D"]
+script = ExtResource("1_6nvwu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 253, 255, 255, 255, 0, 0, 0, 0, 0, 0, 1, 0)
+tile_set = ExtResource("2_sad45")
+rendering_quadrant_size = 160
+physics_quadrant_size = 160
