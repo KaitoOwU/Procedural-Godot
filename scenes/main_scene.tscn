@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://db5cfan2a3vjb"]
+[gd_scene load_steps=9 format=3 uid="uid://db5cfan2a3vjb"]
 
 [ext_resource type="PackedScene" uid="uid://wx1d3cdd6ci2" path="res://scenes/rooms/room_1.tscn" id="1_fekva"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="1_qspk8"]
@@ -8,7 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://d2bd4nrdruls4" path="res://scenes/rooms/room_4.tscn" id="6_jg4hf"]
 [ext_resource type="PackedScene" uid="uid://b20085rng87fk" path="res://scenes/hud.tscn" id="7_i43eg"]
 
+[sub_resource type="GDScript" id="GDScript_c16ls"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="MainScene" type="Node2D"]
+script = SubResource("GDScript_c16ls")
 
 [node name="Dungeon" type="Node2D" parent="."]
 
@@ -41,7 +56,8 @@ position = Vector2(175, -145)
 zoom = Vector2(2.25, 2.25)
 script = ExtResource("2_liovv")
 
-[node name="Player" parent="." instance=ExtResource("1_qspk8")]
+[node name="Player" parent="." node_paths=PackedStringArray("sprites") instance=ExtResource("1_qspk8")]
 position = Vector2(47, -63)
+sprites = []
 
 [node name="hud" parent="." instance=ExtResource("7_i43eg")]

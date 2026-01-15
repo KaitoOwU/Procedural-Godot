@@ -74,13 +74,14 @@ func _physics_process(_delta: float) -> void:
 		if collider is Door:
 			collider.try_unlock()
 
-
+@abstract func _got_hit()
 func apply_hit(attack : Attack) -> void:
 	if Time.get_unix_time_from_system() - _last_hit_time < invincibility_duration:
 		return
 	_last_hit_time = Time.get_unix_time_from_system()
 
 	life -= attack.damages if attack != null else 1
+	_got_hit()
 	if life <= 0:
 		_set_state(STATE.DEAD)
 	else:
@@ -150,9 +151,11 @@ func _attack() -> void:
 	if Time.get_unix_time_from_system() - _last_attack_time < attack_cooldown:
 		return
 
+	_onAttack()
 	_last_attack_time = Time.get_unix_time_from_system()
-	_set_state(STATE.ATTACKING)
+	_set_state(STATE.ATTACKING) 
 
+@abstract func _onAttack()
 
 func _spawn_attack_scene() -> void:
 	if attack_scene == null:

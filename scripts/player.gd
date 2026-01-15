@@ -58,6 +58,10 @@ func _update_inputs() -> void:
 	else:
 		_direction = Vector2.ZERO
 
+func _onAttack():
+	PlayerVariables.trackedData.Attacks.Number+= 1
+	var AttackNumber = PlayerVariables.trackedData.Attacks.Number
+	PlayerVariables.trackedData.Attacks.HitRate =  float(PlayerVariables.trackedData.timesEnnemiesGotHit)/AttackNumber if AttackNumber!= 0 else 0
 
 func _set_state(state : STATE) -> void:
 	super(state)
@@ -79,3 +83,6 @@ func _update_state(_delta : float) -> void:
 		STATE.ATTACKING:
 			_spawn_attack_scene()
 			_set_state(STATE.IDLE)
+
+func _got_hit():
+	PlayerVariables.trackedData.timesPlayerGotHit += 1
