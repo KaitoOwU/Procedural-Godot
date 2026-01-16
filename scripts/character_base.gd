@@ -52,6 +52,28 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	# 1 Knockback control
+	if _has_to_apply_knockback:
+		velocity = _knockback_value
+		_has_to_apply_knockback = false
+
+	# 2 New input 
+	if _can_move():
+		if _direction.length() > 0:
+			velocity = velocity.move_toward(_direction * _current_movement.speed_max, _current_movement.acceleration * _delta)
+			main_sprite.rotation = _compute_orientation_angle(_direction)
+		else:
+			velocity = velocity.move_toward(Vector2.ZERO, _current_movement.friction * _delta)
+	
+	# 3 Apply mouvement
+	move_and_slide()
+
+	# 4 Door detection
+	for i in get_slide_collision_count():
+		var collision : KinematicCollision2D = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is Door:
+			collider.try_unlock()
 	if _has_to_apply_knockback:
 		velocity = _knockback_value
 		_has_to_apply_knockback = false
