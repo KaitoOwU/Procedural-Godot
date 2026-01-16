@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bb4vnt1p2tqi8"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_item.gd" id="1_dih5f"]
+
+[resource]
+script = ExtResource("1_dih5f")
+name = "Crâne"
+metadata/_custom_type_script = "uid://bgggigv2q2wye"

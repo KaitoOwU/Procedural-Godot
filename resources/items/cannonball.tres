@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c84jcd56wj71"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_item.gd" id="1_5ttri"]
+
+[resource]
+script = ExtResource("1_5ttri")
+name = "Boulet de Canon"
+metadata/_custom_type_script = "uid://bgggigv2q2wye"
