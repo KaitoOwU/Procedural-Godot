@@ -26,6 +26,9 @@ func _process(delta: float) -> void:
 func enter_room(room : Room) -> void:
 	var previous = _room
 	_room = room
+	PlayerVariables.trackedData.roomEnteredOrder.append(room.name)
+	if previous :
+		PlayerVariables.trackedData.currentRoom = previous.name
 	_room.on_enter_room(previous)
 
 
