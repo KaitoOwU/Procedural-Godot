@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bwe2ml41t4ilw"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_item.gd" id="1_t2uyk"]
+
+[resource]
+script = ExtResource("1_t2uyk")
+name = "Planche de bois"
+metadata/_custom_type_script = "uid://bgggigv2q2wye"

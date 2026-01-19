@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="QuestEnemy" load_steps=2 format=3 uid="uid://cwbrmaw6vfra2"]
+
+[ext_resource type="Script" uid="uid://cpsag54hle56n" path="res://scripts/quests/quest_enemy.gd" id="1_h350y"]
+
+[resource]
+script = ExtResource("1_h350y")
+name = "Pirate 2"
+metadata/_custom_type_script = "uid://cpsag54hle56n"
