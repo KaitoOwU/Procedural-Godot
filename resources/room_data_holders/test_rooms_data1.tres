@@ -77,5 +77,6 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [resource]
 script = ExtResource("2_atbt5")
+dead_end_rooms_indexs = Array[int]([8, 7, 5, 0])
 room_datas = Array[ExtResource("1_p5ntr")]([SubResource("Resource_p5ntr"), SubResource("Resource_atbt5"), SubResource("Resource_ht3yh"), SubResource("Resource_h3onf"), SubResource("Resource_llu8h"), SubResource("Resource_avcht"), SubResource("Resource_uh45f"), SubResource("Resource_x1mxo"), SubResource("Resource_7kvrq"), SubResource("Resource_6slsc"), SubResource("Resource_u5k2g"), SubResource("Resource_n8uk1")])
 metadata/_custom_type_script = "uid://pkpdeofgn2xv"

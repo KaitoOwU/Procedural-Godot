@@ -1,10 +1,11 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b3ge8mk0di6hw"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://b3ge8mk0di6hw"]
 
 [ext_resource type="PackedScene" uid="uid://0325ybhk11pi" path="res://scenes/test_rooms/test_room_1.tscn" id="1_3as1h"]
 [ext_resource type="PackedScene" uid="uid://bnlnlxt6xb74" path="res://scenes/test_rooms/test_room_10.tscn" id="2_se4bm"]
 [ext_resource type="PackedScene" uid="uid://bgdx5gona7em7" path="res://scenes/test_rooms/test_room_11.tscn" id="3_8t77b"]
 [ext_resource type="PackedScene" uid="uid://bhprwq86436k7" path="res://scenes/test_rooms/test_room_12.tscn" id="4_ahh12"]
 [ext_resource type="PackedScene" uid="uid://bmof8nrjk1j04" path="res://scenes/test_rooms/test_room_2.tscn" id="5_1mwqw"]
+[ext_resource type="PackedScene" uid="uid://cinljgej7owpj" path="res://scenes/spikes.tscn" id="5_8t77b"]
 [ext_resource type="PackedScene" uid="uid://d1ohflxoo0gmb" path="res://scenes/test_rooms/test_room_3.tscn" id="6_5es5e"]
 [ext_resource type="PackedScene" uid="uid://b4rcgmxso6ie2" path="res://scenes/test_rooms/test_room_4.tscn" id="7_sn3x2"]
 [ext_resource type="PackedScene" uid="uid://cxnoogwcy3s26" path="res://scenes/test_rooms/test_room_5.tscn" id="8_8xeqp"]
@@ -26,6 +27,7 @@ scenes/9/scene = ExtResource("12_glvnl")
 scenes/10/scene = ExtResource("2_se4bm")
 scenes/11/scene = ExtResource("3_8t77b")
 scenes/12/scene = ExtResource("4_ahh12")
+scenes/13/scene = ExtResource("5_8t77b")
 
 [resource]
 tile_size = Vector2i(160, 160)
