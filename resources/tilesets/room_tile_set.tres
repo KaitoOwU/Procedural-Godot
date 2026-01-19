@@ -1,9 +1,31 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b3ge8mk0di6hw"]
+[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b3ge8mk0di6hw"]
 
-[ext_resource type="PackedScene" uid="uid://0325ybhk11pi" path="res://scenes/test_room_1.tscn" id="1_3as1h"]
+[ext_resource type="PackedScene" uid="uid://0325ybhk11pi" path="res://scenes/test_rooms/test_room_1.tscn" id="1_3as1h"]
+[ext_resource type="PackedScene" uid="uid://bnlnlxt6xb74" path="res://scenes/test_rooms/test_room_10.tscn" id="2_se4bm"]
+[ext_resource type="PackedScene" uid="uid://bgdx5gona7em7" path="res://scenes/test_rooms/test_room_11.tscn" id="3_8t77b"]
+[ext_resource type="PackedScene" uid="uid://bhprwq86436k7" path="res://scenes/test_rooms/test_room_12.tscn" id="4_ahh12"]
+[ext_resource type="PackedScene" uid="uid://bmof8nrjk1j04" path="res://scenes/test_rooms/test_room_2.tscn" id="5_1mwqw"]
+[ext_resource type="PackedScene" uid="uid://d1ohflxoo0gmb" path="res://scenes/test_rooms/test_room_3.tscn" id="6_5es5e"]
+[ext_resource type="PackedScene" uid="uid://b4rcgmxso6ie2" path="res://scenes/test_rooms/test_room_4.tscn" id="7_sn3x2"]
+[ext_resource type="PackedScene" uid="uid://cxnoogwcy3s26" path="res://scenes/test_rooms/test_room_5.tscn" id="8_8xeqp"]
+[ext_resource type="PackedScene" uid="uid://dler6v8cw4wa" path="res://scenes/test_rooms/test_room_6.tscn" id="9_gjjnj"]
+[ext_resource type="PackedScene" uid="uid://c5qqtehfjgdpx" path="res://scenes/test_rooms/test_room_7.tscn" id="10_c12ke"]
+[ext_resource type="PackedScene" uid="uid://bljwbfinw7df7" path="res://scenes/test_rooms/test_room_8.tscn" id="11_slksy"]
+[ext_resource type="PackedScene" uid="uid://bxxlljt7y3oqf" path="res://scenes/test_rooms/test_room_9.tscn" id="12_glvnl"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_bnnen"]
 scenes/1/scene = ExtResource("1_3as1h")
+scenes/2/scene = ExtResource("5_1mwqw")
+scenes/3/scene = ExtResource("6_5es5e")
+scenes/4/scene = ExtResource("7_sn3x2")
+scenes/5/scene = ExtResource("8_8xeqp")
+scenes/6/scene = ExtResource("9_gjjnj")
+scenes/7/scene = ExtResource("10_c12ke")
+scenes/8/scene = ExtResource("11_slksy")
+scenes/9/scene = ExtResource("12_glvnl")
+scenes/10/scene = ExtResource("2_se4bm")
+scenes/11/scene = ExtResource("3_8t77b")
+scenes/12/scene = ExtResource("4_ahh12")
 
 [resource]
 tile_size = Vector2i(160, 160)

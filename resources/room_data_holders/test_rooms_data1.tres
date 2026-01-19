@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="RoomDataHolder" load_steps=15 format=3 uid="uid://pilhf3isx1lk"]
+
+[ext_resource type="Script" uid="uid://brc1gejepqbip" path="res://scripts/resource_scripts/room_data.gd" id="1_p5ntr"]
+[ext_resource type="Script" uid="uid://pkpdeofgn2xv" path="res://scripts/resource_scripts/room_data_holder.gd" id="2_atbt5"]
+
+[sub_resource type="Resource" id="Resource_p5ntr"]
+script = ExtResource("1_p5ntr")
+id = 1
+had_door = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_atbt5"]
+script = ExtResource("1_p5ntr")
+id = 2
+had_door = 11
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ht3yh"]
+script = ExtResource("1_p5ntr")
+id = 3
+had_door = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_h3onf"]
+script = ExtResource("1_p5ntr")
+id = 4
+had_door = 7
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_llu8h"]
+script = ExtResource("1_p5ntr")
+id = 5
+had_door = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_avcht"]
+script = ExtResource("1_p5ntr")
+id = 6
+had_door = 4
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_uh45f"]
+script = ExtResource("1_p5ntr")
+id = 7
+had_door = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_x1mxo"]
+script = ExtResource("1_p5ntr")
+id = 8
+had_door = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_7kvrq"]
+script = ExtResource("1_p5ntr")
+id = 9
+had_door = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_6slsc"]
+script = ExtResource("1_p5ntr")
+id = 10
+had_door = 3
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_u5k2g"]
+script = ExtResource("1_p5ntr")
+id = 11
+had_door = 10
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_n8uk1"]
+script = ExtResource("1_p5ntr")
+id = 12
+had_door = 6
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[resource]
+script = ExtResource("2_atbt5")
+room_datas = Array[ExtResource("1_p5ntr")]([SubResource("Resource_p5ntr"), SubResource("Resource_atbt5"), SubResource("Resource_ht3yh"), SubResource("Resource_h3onf"), SubResource("Resource_llu8h"), SubResource("Resource_avcht"), SubResource("Resource_uh45f"), SubResource("Resource_x1mxo"), SubResource("Resource_7kvrq"), SubResource("Resource_6slsc"), SubResource("Resource_u5k2g"), SubResource("Resource_n8uk1")])
+metadata/_custom_type_script = "uid://pkpdeofgn2xv"
