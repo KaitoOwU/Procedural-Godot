@@ -66,11 +66,11 @@ static func AngleToOrientation(angle : float, origin : ORIENTATION = ORIENTATION
 static func OrientationToDir(orientation : ORIENTATION) -> Vector2i:
 	match orientation:
 		ORIENTATION.NORTH:
-			return Vector2i(0, 1)
+			return Vector2i(0, -1)
 		ORIENTATION.EAST:
 			return Vector2i(1, 0)
 		ORIENTATION.SOUTH:
-			return Vector2i(0, -1)
+			return Vector2i(0, 1)
 		ORIENTATION.WEST:
 			return Vector2i(-1, 0)
 	

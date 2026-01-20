@@ -1,6 +1,6 @@
 class_name EnemySpawner extends Node
 
-@export var enemyTileMap : TileMapLayer
+@onready var enemyTileMap : TileMapLayer = $"../TileMapLayer_ENEMYSPAWN"
 var enemiesNumber : int
 
 # const enemyBase = preload("res://scenes/enemy.tscn")
