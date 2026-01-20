@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 func enter_room(room : Room) -> void:
 	var previous = _room
 	_room = room
-	_room.on_enter_room(previous)
+	#_room.on_enter_room(previous)
 
 
 func _update_room() -> void:
