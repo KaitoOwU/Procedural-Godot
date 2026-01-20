@@ -33,6 +33,9 @@ func SpawnRoom(room_id : int, map_coords : Vector2i):
 	
 func HasDoorOn (room_direction : door_position_tags_enum, room_data_sub_resource : room_data) -> bool :
 	return room_data_sub_resource.had_door & room_direction
+	
+func IsBeachDoor (room_direction : door_position_tags_enum, room_data_sub_resource : room_data) -> bool :
+	return room_data_sub_resource.is_door_beach_type & room_direction
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -89,6 +92,7 @@ func GenerateTree() :
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.UP 
 			new_tile.direction = Vector2i.DOWN
+			new_tile.is_beach = IsBeachDoor(door_position_tags_enum.UP, chosen_room)
 			tiles_to_fill.push_back(new_tile)
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
@@ -97,6 +101,7 @@ func GenerateTree() :
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.DOWN 
 			new_tile.direction = Vector2i.UP
+			new_tile.is_beach = IsBeachDoor(door_position_tags_enum.DOWN, chosen_room)
 			tiles_to_fill.push_back(new_tile)
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
@@ -105,6 +110,7 @@ func GenerateTree() :
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.LEFT 
 			new_tile.direction = Vector2i.RIGHT
+			new_tile.is_beach = IsBeachDoor(door_position_tags_enum.LEFT, chosen_room)
 			tiles_to_fill.push_back(new_tile)
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
@@ -113,6 +119,7 @@ func GenerateTree() :
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.RIGHT 
 			new_tile.direction = Vector2i.LEFT
+			new_tile.is_beach = IsBeachDoor(door_position_tags_enum.RIGHT, chosen_room)
 			tiles_to_fill.push_back(new_tile)
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
@@ -124,7 +131,6 @@ func GenerateTree() :
 		
 		print(tiles_to_fill.size())
 		pass
-		#pass
 	pass
 	
 	if (tiles_to_fill.is_empty() == false) :
@@ -142,7 +148,10 @@ func GenerateTree() :
 				
 				possible_room_IDs.append(room.id)
 				pass
-			SpawnRoom(possible_room_IDs.pick_random(), tile.coords)
+			if possible_room_IDs.is_empty():
+				print ("ERROR, no possible rooms !")
+			else :
+				SpawnRoom(possible_room_IDs.pick_random(), tile.coords)
 			pass
 		pass
 	
@@ -160,8 +169,10 @@ func TestPossibleRoomInDirection (room : room_data, tile_to_fill : CoordsAndDire
 			vectorDirection = Vector2i.RIGHT
 	
 	if HasDoorOn(direction, room) :
-		if tile_to_fill.direction == vectorDirection:
-			pass # The door is leading to the tile's mother room. So all good. 
+		if tile_to_fill.direction == vectorDirection: # The door is leading to the tile's mother room. So all good. 
+			if tile_to_fill.is_beach != IsBeachDoor(direction, room):
+				return false
+			pass 
 		elif occupied_tiles.has(tile_to_fill.coords + vectorDirection) :
 			return false # is there a door AND a room here ? that won't do. continue to the next room
 	elif tile_to_fill.direction == vectorDirection:
@@ -183,7 +194,7 @@ func TestPossibleRoomInDirection (room : room_data, tile_to_fill : CoordsAndDire
 			for each un-ended door in this new room:
 				add to 'un-ended door list'
 			remove DOOR from un-ended doors. 
-			'''
+	'''
 	pass
 	
 	
