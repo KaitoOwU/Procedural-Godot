@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RoomDataHolder" load_steps=15 format=3 uid="uid://pilhf3isx1lk"]
+[gd_resource type="Resource" script_class="RoomDataHolder" load_steps=31 format=3 uid="uid://pilhf3isx1lk"]
 
 [ext_resource type="Script" uid="uid://brc1gejepqbip" path="res://scripts/resource_scripts/room_data.gd" id="1_p5ntr"]
 [ext_resource type="Script" uid="uid://pkpdeofgn2xv" path="res://scripts/resource_scripts/room_data_holder.gd" id="2_atbt5"]
@@ -75,8 +75,120 @@ id = 12
 had_door = 6
 metadata/_custom_type_script = "uid://brc1gejepqbip"
 
+[sub_resource type="Resource" id="Resource_spxa1"]
+script = ExtResource("1_p5ntr")
+id = 14
+had_door = 1
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_pvlrt"]
+script = ExtResource("1_p5ntr")
+id = 15
+had_door = 7
+is_door_beach_type = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_8chc5"]
+script = ExtResource("1_p5ntr")
+id = 16
+had_door = 12
+is_door_beach_type = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_8deud"]
+script = ExtResource("1_p5ntr")
+id = 17
+had_door = 11
+is_door_beach_type = 11
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_rs65d"]
+script = ExtResource("1_p5ntr")
+id = 18
+had_door = 12
+is_door_beach_type = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_37f86"]
+script = ExtResource("1_p5ntr")
+id = 19
+had_door = 4
+is_door_beach_type = 4
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_l1iid"]
+script = ExtResource("1_p5ntr")
+id = 20
+had_door = 15
+is_door_beach_type = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_on6f5"]
+script = ExtResource("1_p5ntr")
+id = 21
+had_door = 8
+is_door_beach_type = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_d2fkg"]
+script = ExtResource("1_p5ntr")
+id = 22
+had_door = 2
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_v5wb0"]
+script = ExtResource("1_p5ntr")
+id = 23
+had_door = 3
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_615jl"]
+script = ExtResource("1_p5ntr")
+id = 24
+had_door = 10
+is_door_beach_type = 10
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_2x372"]
+script = ExtResource("1_p5ntr")
+id = 25
+had_door = 6
+is_door_beach_type = 6
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_16m5f"]
+script = ExtResource("1_p5ntr")
+id = 26
+had_door = 3
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_i5trt"]
+script = ExtResource("1_p5ntr")
+id = 27
+had_door = 3
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_aovua"]
+script = ExtResource("1_p5ntr")
+id = 28
+had_door = 12
+is_door_beach_type = 4
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_gxl2d"]
+script = ExtResource("1_p5ntr")
+id = 29
+had_door = 12
+is_door_beach_type = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
 [resource]
 script = ExtResource("2_atbt5")
 dead_end_rooms_indexs = Array[int]([8, 7, 5, 0])
-room_datas = Array[ExtResource("1_p5ntr")]([SubResource("Resource_p5ntr"), SubResource("Resource_atbt5"), SubResource("Resource_ht3yh"), SubResource("Resource_h3onf"), SubResource("Resource_llu8h"), SubResource("Resource_avcht"), SubResource("Resource_uh45f"), SubResource("Resource_x1mxo"), SubResource("Resource_7kvrq"), SubResource("Resource_6slsc"), SubResource("Resource_u5k2g"), SubResource("Resource_n8uk1")])
+room_datas = Array[ExtResource("1_p5ntr")]([SubResource("Resource_p5ntr"), SubResource("Resource_atbt5"), SubResource("Resource_ht3yh"), SubResource("Resource_h3onf"), SubResource("Resource_llu8h"), SubResource("Resource_avcht"), SubResource("Resource_uh45f"), SubResource("Resource_x1mxo"), SubResource("Resource_7kvrq"), SubResource("Resource_6slsc"), SubResource("Resource_u5k2g"), SubResource("Resource_n8uk1"), SubResource("Resource_spxa1"), SubResource("Resource_pvlrt"), SubResource("Resource_8chc5"), SubResource("Resource_8deud"), SubResource("Resource_rs65d"), SubResource("Resource_37f86"), SubResource("Resource_l1iid"), SubResource("Resource_on6f5"), SubResource("Resource_d2fkg"), SubResource("Resource_v5wb0"), SubResource("Resource_615jl"), SubResource("Resource_2x372"), SubResource("Resource_16m5f"), SubResource("Resource_i5trt"), SubResource("Resource_aovua"), SubResource("Resource_gxl2d")])
 metadata/_custom_type_script = "uid://pkpdeofgn2xv"
