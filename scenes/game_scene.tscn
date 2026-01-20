@@ -11,9 +11,8 @@
 position = Vector2(80, 80)
 is_start_room = true
 
-[node name="Player" parent="." node_paths=PackedStringArray("sprites") instance=ExtResource("2_ycayy")]
+[node name="Player" parent="." instance=ExtResource("2_ycayy")]
 position = Vector2(80, 95)
-sprites = [NodePath("BodySprite"), null]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(80, 80)
