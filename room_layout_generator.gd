@@ -21,6 +21,7 @@ func _ready() -> void:
 	rooms_data_resource = rooms_data_node.rooms_data_resource
 	rooms_data_array = rooms_data_resource.room_datas
 
+	print ("🤨")
 	GenerateTree()
 	set_process_input(true) 
 
@@ -55,7 +56,7 @@ func GenerateTree() :
 	tiles_to_fill.clear()
 	
 	var start_pos = Vector2i(0, 0)
-	SpawnRoom(1, start_pos) # will always only have 1 door going up
+	# SpawnRoom(1, start_pos) # will always only have 1 door going up
 	
 	# add empty tile coords to TILES TO BE FILLED
 	var new_tile_to_fill : CoordsAndDirection = CoordsAndDirection.new()
