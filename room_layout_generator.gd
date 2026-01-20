@@ -89,7 +89,6 @@ func GenerateTree() :
 		var chosen_room : room_data = compatible_rooms.pick_random()
 		
 		if HasDoorOn(door_position_tags_enum.UP, chosen_room) && tile.direction != Vector2i.UP :
-			print("up added")
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.UP 
 			new_tile.direction = Vector2i.DOWN
@@ -98,7 +97,6 @@ func GenerateTree() :
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
 		if HasDoorOn(door_position_tags_enum.DOWN, chosen_room) && tile.direction != Vector2i.DOWN :
-			print("down added")
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.DOWN 
 			new_tile.direction = Vector2i.UP
@@ -107,7 +105,6 @@ func GenerateTree() :
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
 		if HasDoorOn(door_position_tags_enum.LEFT, chosen_room) && tile.direction != Vector2i.LEFT :
-			print("left added")
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.LEFT 
 			new_tile.direction = Vector2i.RIGHT
@@ -116,7 +113,6 @@ func GenerateTree() :
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
 		if HasDoorOn(door_position_tags_enum.RIGHT, chosen_room) && tile.direction != Vector2i.RIGHT :
-			print("right added")
 			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
 			new_tile.coords = tile.coords + Vector2i.RIGHT 
 			new_tile.direction = Vector2i.LEFT
@@ -129,8 +125,7 @@ func GenerateTree() :
 		room_count += 1
 		
 		await get_tree().create_timer(1.0).timeout
-		
-		print(tiles_to_fill.size())
+
 		pass
 	pass
 	
