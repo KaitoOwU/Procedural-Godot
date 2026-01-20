@@ -1,17 +1,34 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b3ge8mk0di6hw"]
+[gd_resource type="TileSet" load_steps=31 format=3 uid="uid://b3ge8mk0di6hw"]
 
 [ext_resource type="PackedScene" uid="uid://0325ybhk11pi" path="res://scenes/test_rooms/test_room_1.tscn" id="1_3as1h"]
 [ext_resource type="PackedScene" uid="uid://bnlnlxt6xb74" path="res://scenes/test_rooms/test_room_10.tscn" id="2_se4bm"]
 [ext_resource type="PackedScene" uid="uid://bgdx5gona7em7" path="res://scenes/test_rooms/test_room_11.tscn" id="3_8t77b"]
 [ext_resource type="PackedScene" uid="uid://bhprwq86436k7" path="res://scenes/test_rooms/test_room_12.tscn" id="4_ahh12"]
 [ext_resource type="PackedScene" uid="uid://bmof8nrjk1j04" path="res://scenes/test_rooms/test_room_2.tscn" id="5_1mwqw"]
+[ext_resource type="PackedScene" uid="uid://cinljgej7owpj" path="res://scenes/spikes.tscn" id="5_8t77b"]
 [ext_resource type="PackedScene" uid="uid://d1ohflxoo0gmb" path="res://scenes/test_rooms/test_room_3.tscn" id="6_5es5e"]
+[ext_resource type="PackedScene" uid="uid://dx01cxajwlhge" path="res://scenes/test_rooms_breach/test_room_1b.tscn" id="6_apusr"]
 [ext_resource type="PackedScene" uid="uid://b4rcgmxso6ie2" path="res://scenes/test_rooms/test_room_4.tscn" id="7_sn3x2"]
+[ext_resource type="PackedScene" uid="uid://dbijnhwhcmlfb" path="res://scenes/test_rooms_breach/test_room_2.tscn" id="7_v1pma"]
 [ext_resource type="PackedScene" uid="uid://cxnoogwcy3s26" path="res://scenes/test_rooms/test_room_5.tscn" id="8_8xeqp"]
+[ext_resource type="PackedScene" uid="uid://ccuvnqyavmb35" path="res://scenes/test_rooms_breach/test_room_3.tscn" id="8_x7x1t"]
 [ext_resource type="PackedScene" uid="uid://dler6v8cw4wa" path="res://scenes/test_rooms/test_room_6.tscn" id="9_gjjnj"]
+[ext_resource type="PackedScene" uid="uid://ciecwrse8vaui" path="res://scenes/test_rooms_breach/test_room_4.tscn" id="9_tmnne"]
 [ext_resource type="PackedScene" uid="uid://c5qqtehfjgdpx" path="res://scenes/test_rooms/test_room_7.tscn" id="10_c12ke"]
+[ext_resource type="PackedScene" uid="uid://bevknc1f68o3i" path="res://scenes/test_rooms_breach/test_room_5.tscn" id="10_yb50k"]
+[ext_resource type="PackedScene" uid="uid://q5q1hsrd32gr" path="res://scenes/test_rooms_breach/test_room_6.tscn" id="11_b84jg"]
 [ext_resource type="PackedScene" uid="uid://bljwbfinw7df7" path="res://scenes/test_rooms/test_room_8.tscn" id="11_slksy"]
 [ext_resource type="PackedScene" uid="uid://bxxlljt7y3oqf" path="res://scenes/test_rooms/test_room_9.tscn" id="12_glvnl"]
+[ext_resource type="PackedScene" uid="uid://b21avpsc47bsw" path="res://scenes/test_rooms_breach/test_room_7.tscn" id="13_pmj3a"]
+[ext_resource type="PackedScene" uid="uid://cj2l18u25mppu" path="res://scenes/test_rooms_breach/test_room_8.tscn" id="14_njpda"]
+[ext_resource type="PackedScene" uid="uid://bcqjhqsyhe4da" path="res://scenes/test_rooms_breach/test_room_9.tscn" id="15_gke2l"]
+[ext_resource type="PackedScene" uid="uid://2hsqt2gwwdje" path="res://scenes/test_rooms_breach/test_room_10.tscn" id="16_38jco"]
+[ext_resource type="PackedScene" uid="uid://c8n50nnjvuef0" path="res://scenes/test_rooms_breach/test_room_11.tscn" id="17_vk0ik"]
+[ext_resource type="PackedScene" uid="uid://itt6nlwhqtrf" path="res://scenes/test_rooms_breach/test_room_12.tscn" id="18_8y8gk"]
+[ext_resource type="PackedScene" uid="uid://cw66x80sgcuwn" path="res://scenes/test_rooms_breach/test_room_13.tscn" id="19_pyayd"]
+[ext_resource type="PackedScene" uid="uid://bmy0hyb28y41g" path="res://scenes/test_rooms_breach/test_room_14.tscn" id="20_6pqui"]
+[ext_resource type="PackedScene" uid="uid://chru1vfdm0r1g" path="res://scenes/test_rooms_breach/test_room_15.tscn" id="21_170gy"]
+[ext_resource type="PackedScene" uid="uid://cgha6mo5u6u83" path="res://scenes/test_rooms_breach/test_room_16.tscn" id="22_34n63"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_bnnen"]
 scenes/1/scene = ExtResource("1_3as1h")
@@ -26,6 +43,23 @@ scenes/9/scene = ExtResource("12_glvnl")
 scenes/10/scene = ExtResource("2_se4bm")
 scenes/11/scene = ExtResource("3_8t77b")
 scenes/12/scene = ExtResource("4_ahh12")
+scenes/13/scene = ExtResource("5_8t77b")
+scenes/14/scene = ExtResource("6_apusr")
+scenes/15/scene = ExtResource("7_v1pma")
+scenes/16/scene = ExtResource("8_x7x1t")
+scenes/17/scene = ExtResource("9_tmnne")
+scenes/18/scene = ExtResource("10_yb50k")
+scenes/19/scene = ExtResource("11_b84jg")
+scenes/20/scene = ExtResource("13_pmj3a")
+scenes/21/scene = ExtResource("14_njpda")
+scenes/22/scene = ExtResource("15_gke2l")
+scenes/23/scene = ExtResource("16_38jco")
+scenes/24/scene = ExtResource("17_vk0ik")
+scenes/25/scene = ExtResource("18_8y8gk")
+scenes/26/scene = ExtResource("19_pyayd")
+scenes/27/scene = ExtResource("20_6pqui")
+scenes/28/scene = ExtResource("21_170gy")
+scenes/29/scene = ExtResource("22_34n63")
 
 [resource]
 tile_size = Vector2i(160, 160)

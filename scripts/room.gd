@@ -11,7 +11,7 @@ static var all_rooms : Array[Room]
 
 var doors : Array[Door]
 
-@onready var _cam : CameraFollow = $/root/MainScene/Camera2D
+@onready var _cam : CameraFollow = $"../Camera2D"
 
 
 func _ready() -> void:
