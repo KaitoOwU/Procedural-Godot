@@ -6,20 +6,16 @@ var enemiesNumber : int
 # const enemyBase = preload("res://scenes/enemy.tscn")
 
 func _ready() -> void:
-	enemiesNumber = 3
+	enemiesNumber = 1
 	_spawnEnemiesInZone(enemyTileMap, enemiesNumber)
 
-
-func _process(delta: float) -> void:
-	pass
-
 func _spawnEnemiesInZone(tilemap: TileMapLayer, n:int) -> void:
+	var enemyBase = preload("res://scenes/enemy.tscn")
+	var room : Room = $".."
 	var tiles = tilemap.get_used_cells()
 	tiles.shuffle()
 	for t in n:
-		var enemyBase = preload("res://scenes/enemy.tscn")
 		var obj = enemyBase.instantiate()
 		add_child(obj)
-		obj.position = tiles[t]
-		
+		obj.position = Vector2(tiles[t].x, tiles[t].y) + room.global_position	
 	
