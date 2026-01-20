@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dil70msl3hiy0" path="res://sprites/Monochrome/Tilemap/tilemap_packed.png" id="5_qlg0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eidcf"]
-radius = 5.025438
+radius = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("5_qlg0r")
@@ -92,8 +92,9 @@ orientation = 1
 animator = NodePath("BodySprite/AnimationPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5.24)
+position = Vector2(0, 3.115)
 shape = SubResource("CircleShape2D_eidcf")
+debug_color = Color(0, 0.6074105, 0.6572421, 0.41960785)
 
 [node name="BodySprite" type="Sprite2D" parent="."]
 modulate = Color(1, 0.8923333, 0.65999997, 1)
