@@ -11,14 +11,18 @@ enum door_position_tags_enum {
 @onready var tile_map_layer : TileMapLayer = $TileMapLayer
 @onready var rooms_data_node : Node2D = $RoomsData
 
+var rooms_data_resource : Resource
 var rooms_data_array : Array[room_data]
 var tiles_to_fill : Array[CoordsAndDirection]
 var occupied_tiles : Array[Vector2i]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var rooms_data_resource : Resource = rooms_data_node.rooms_data_resource
+	rooms_data_resource = rooms_data_node.rooms_data_resource
 	rooms_data_array = rooms_data_resource.room_datas
+
+	GenerateTree()
+	set_process_input(true) 
 
 	pass
 	
@@ -28,47 +32,141 @@ func SpawnRoom(room_id : int, map_coords : Vector2i):
 	pass
 	
 func HasDoorOn (room_direction : door_position_tags_enum, room_data_sub_resource : room_data) -> bool :
-	return ((room_data_sub_resource.had_door & room_direction) == 1)
+	return room_data_sub_resource.had_door & room_direction
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	#if Input.is_key_pressed(KEY_SPACE):
+
+	pass
+	
+func _input(ev):
+	if ev is InputEventKey:
+		if ev.keycode == KEY_SPACE and ev.pressed and not ev.echo:
+			tile_map_layer.clear()
+			GenerateTree()
 	pass
 	
 func GenerateTree() :
+	occupied_tiles.clear()
+	tiles_to_fill.clear()
+	
 	var start_pos = Vector2i(0, 0)
 	SpawnRoom(1, start_pos) # will always only have 1 door going up
 	
 	# add empty tile coords to TILES TO BE FILLED
-	var new_tile_to_fill : CoordsAndDirection
+	var new_tile_to_fill : CoordsAndDirection = CoordsAndDirection.new()
 	new_tile_to_fill.coords = start_pos + Vector2i.UP 
-	new_tile_to_fill.coords = Vector2i.DOWN
+	new_tile_to_fill.direction = Vector2i.DOWN
 	tiles_to_fill.push_back(new_tile_to_fill)
 	
 	# add both tiles to OCUPIED TILES
 	occupied_tiles.push_back(start_pos)
 	occupied_tiles.push_back(start_pos + Vector2i.UP)
+	var room_count : int = 0
 	
-	while tiles_to_fill.is_empty() != true :
-		for tile in tiles_to_fill:
+	while tiles_to_fill.is_empty() != true && room_count < 20:
+		var tile = tiles_to_fill.pop_front()
+		#for tile in tiles_to_fill:
 			
-			for room in rooms_data_array:
-				
+		var compatible_rooms : Array[room_data]
+		
+		for room in rooms_data_array:
+			
+			# check neibor tile slots
+			if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.UP) : continue
+			if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.DOWN) : continue
+			if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.LEFT) : continue
+			if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.RIGHT) : continue
+			
+			compatible_rooms.append(room)
+			pass
+		
+		var chosen_room : room_data = compatible_rooms.pick_random()
+		
+		if HasDoorOn(door_position_tags_enum.UP, chosen_room) && tile.direction != Vector2i.UP :
+			print("up added")
+			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
+			new_tile.coords = tile.coords + Vector2i.UP 
+			new_tile.direction = Vector2i.DOWN
+			tiles_to_fill.push_back(new_tile)
+			occupied_tiles.append(new_tile.coords)
+			SpawnRoom(13, new_tile.coords)
+		if HasDoorOn(door_position_tags_enum.DOWN, chosen_room) && tile.direction != Vector2i.DOWN :
+			print("down added")
+			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
+			new_tile.coords = tile.coords + Vector2i.DOWN 
+			new_tile.direction = Vector2i.UP
+			tiles_to_fill.push_back(new_tile)
+			occupied_tiles.append(new_tile.coords)
+			SpawnRoom(13, new_tile.coords)
+		if HasDoorOn(door_position_tags_enum.LEFT, chosen_room) && tile.direction != Vector2i.LEFT :
+			print("left added")
+			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
+			new_tile.coords = tile.coords + Vector2i.LEFT 
+			new_tile.direction = Vector2i.RIGHT
+			tiles_to_fill.push_back(new_tile)
+			occupied_tiles.append(new_tile.coords)
+			SpawnRoom(13, new_tile.coords)
+		if HasDoorOn(door_position_tags_enum.RIGHT, chosen_room) && tile.direction != Vector2i.RIGHT :
+			print("right added")
+			var new_tile : CoordsAndDirection = CoordsAndDirection.new()
+			new_tile.coords = tile.coords + Vector2i.RIGHT 
+			new_tile.direction = Vector2i.LEFT
+			tiles_to_fill.push_back(new_tile)
+			occupied_tiles.append(new_tile.coords)
+			SpawnRoom(13, new_tile.coords)
+		
+		SpawnRoom(chosen_room.id, tile.coords)
+		room_count += 1
+		
+		await get_tree().create_timer(1.0).timeout
+		
+		print(tiles_to_fill.size())
+		pass
+		#pass
+	pass
+	
+	if (tiles_to_fill.is_empty() == false) :
+		for tile in tiles_to_fill:
+			var possible_room_IDs : Array[int]
+			
+			for dead_end_tile_index in rooms_data_resource.dead_end_rooms_indexs :
 				# check neibor tile slots
+				var room : room_data = rooms_data_array[dead_end_tile_index]
 				
-				# UP
-				if (HasDoorOn(door_position_tags_enum.UP, room) == true && occupied_tiles.has(tile.coords + Vector2i.UP)) :
-					if tile.direction == Vector2i.UP:
-						pass # we know that there is a room & door here and we don't care
-					elif occupied_tiles.has(tile.coords + Vector2i.UP) :
-						continue # is there a door AND a room here ? that won't do. continue to the next room
-
+				if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.UP) : continue
+				if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.DOWN) : continue
+				if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.LEFT) : continue
+				if !TestPossibleRoomInDirection(room, tile, door_position_tags_enum.RIGHT) : continue
+				
+				possible_room_IDs.append(room.id)
 				pass
+			SpawnRoom(possible_room_IDs.pick_random(), tile.coords)
 			pass
 		pass
 	
+func TestPossibleRoomInDirection (room : room_data, tile_to_fill : CoordsAndDirection, direction : door_position_tags_enum) -> bool:
 	
-func TestPossibleRoom (room : room_data, tile_to_fill : CoordsAndDirection, direction : door_position_tags_enum):
-	pass
+	var vectorDirection : Vector2i
+	match direction:
+		door_position_tags_enum.UP:
+			vectorDirection = Vector2i.UP
+		door_position_tags_enum.DOWN:
+			vectorDirection = Vector2i.DOWN
+		door_position_tags_enum.LEFT:
+			vectorDirection = Vector2i.LEFT
+		door_position_tags_enum.RIGHT:
+			vectorDirection = Vector2i.RIGHT
+	
+	if HasDoorOn(direction, room) :
+		if tile_to_fill.direction == vectorDirection:
+			pass # The door is leading to the tile's mother room. So all good. 
+		elif occupied_tiles.has(tile_to_fill.coords + vectorDirection) :
+			return false # is there a door AND a room here ? that won't do. continue to the next room
+	elif tile_to_fill.direction == vectorDirection:
+		return false
+	return true
 	
 	'''
 	spawn thr starter room at 0, 0
