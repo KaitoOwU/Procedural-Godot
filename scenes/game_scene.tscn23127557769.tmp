@@ -15,8 +15,8 @@ is_start_room = true
 position = Vector2(80, 95)
 sprites = [NodePath("BodySprite"), null]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(80, 80)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-80, -95)
 zoom = Vector2(3, 3)
 script = ExtResource("3_ycayy")
 
