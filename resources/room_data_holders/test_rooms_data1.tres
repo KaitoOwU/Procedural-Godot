@@ -85,8 +85,8 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 [sub_resource type="Resource" id="Resource_pvlrt"]
 script = ExtResource("1_p5ntr")
 id = 15
-had_door = 7
-is_door_beach_type = 15
+had_door = 11
+is_door_beach_type = 11
 metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [sub_resource type="Resource" id="Resource_8chc5"]
@@ -99,8 +99,8 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 [sub_resource type="Resource" id="Resource_8deud"]
 script = ExtResource("1_p5ntr")
 id = 17
-had_door = 11
-is_door_beach_type = 11
+had_door = 7
+is_door_beach_type = 7
 metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [sub_resource type="Resource" id="Resource_rs65d"]
@@ -189,6 +189,6 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [resource]
 script = ExtResource("2_atbt5")
-dead_end_rooms_indexs = Array[int]([8, 7, 5, 0])
+dead_end_rooms_indexs = Array[int]([8, 7, 5, 0, 20, 17, 19, 12])
 room_datas = Array[ExtResource("1_p5ntr")]([SubResource("Resource_p5ntr"), SubResource("Resource_atbt5"), SubResource("Resource_ht3yh"), SubResource("Resource_h3onf"), SubResource("Resource_llu8h"), SubResource("Resource_avcht"), SubResource("Resource_uh45f"), SubResource("Resource_x1mxo"), SubResource("Resource_7kvrq"), SubResource("Resource_6slsc"), SubResource("Resource_u5k2g"), SubResource("Resource_n8uk1"), SubResource("Resource_spxa1"), SubResource("Resource_pvlrt"), SubResource("Resource_8chc5"), SubResource("Resource_8deud"), SubResource("Resource_rs65d"), SubResource("Resource_37f86"), SubResource("Resource_l1iid"), SubResource("Resource_on6f5"), SubResource("Resource_d2fkg"), SubResource("Resource_v5wb0"), SubResource("Resource_615jl"), SubResource("Resource_2x372"), SubResource("Resource_16m5f"), SubResource("Resource_i5trt"), SubResource("Resource_aovua"), SubResource("Resource_gxl2d")])
 metadata/_custom_type_script = "uid://pkpdeofgn2xv"

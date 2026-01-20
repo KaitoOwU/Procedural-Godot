@@ -5,3 +5,6 @@ class_name CoordsAndDirection
 
 #the direction that their mother tile is. 
 @export var direction : Vector2i
+
+#is the comthe connected via a beach door ?
+@export var is_beach : bool
