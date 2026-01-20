@@ -61,7 +61,7 @@ func _physics_process(_delta: float) -> void:
 	if _can_move():
 		if _direction.length() > 0:
 			velocity = velocity.move_toward(_direction * _current_movement.speed_max, _current_movement.acceleration * _delta)
-			main_sprite.rotation = _compute_orientation_angle(_direction)
+			#main_sprite.rotation = _compute_orientation_angle(_direction)
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, _current_movement.friction * _delta)
 	
