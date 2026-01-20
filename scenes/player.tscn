@@ -7,26 +7,28 @@
 [ext_resource type="Texture2D" uid="uid://dil70msl3hiy0" path="res://sprites/Monochrome/Tilemap/tilemap_packed.png" id="5_qlg0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eidcf"]
+radius = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("5_qlg0r")
 region = Rect2(112, 112, 16, 16)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprites", "attack_spawn_point")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprites")]
 collision_mask = 5
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_ups2j")
 dead_color = Color(0.413595, 0.399579, 0.385991, 1)
-sprites = [NodePath("BodySprite"), NodePath("")]
+sprites = [NodePath("BodySprite"), null]
 default_movement = ExtResource("2_ay78m")
 stunned_movemement = ExtResource("3_8ktro")
 attack_scene = ExtResource("4_u74pk")
-attack_spawn_point = NodePath("")
 orientation = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.115)
 shape = SubResource("CircleShape2D_eidcf")
+debug_color = Color(0, 0.6074105, 0.6572421, 0.41960785)
 
 [node name="BodySprite" type="Sprite2D" parent="."]
 modulate = Color(1, 0.8923333, 0.65999997, 1)
