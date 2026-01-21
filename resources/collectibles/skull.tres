@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestCollectible" load_steps=3 format=3 uid="uid://bb4vnt1p2tqi8"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_collectible.gd" id="1_dih5f"]
+[ext_resource type="PackedScene" uid="uid://bsckl046yfq76" path="res://scenes/collectibles/skull_collectible.tscn" id="1_ewftr"]
+
+[resource]
+script = ExtResource("1_dih5f")
+name = "Crâne"
+sceneRef = ExtResource("1_ewftr")
+metadata/_custom_type_script = "uid://bgggigv2q2wye"

@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://boei5dbdfnuex"]
 
-[ext_resource type="PackedScene" uid="uid://nmpi1435amt" path="res://scenes/key_collectible.tscn" id="1_k7xku"]
+[ext_resource type="PackedScene" uid="uid://nmpi1435amt" path="res://scenes/collectibles/key_collectible.tscn" id="1_k7xku"]
 [ext_resource type="Texture2D" uid="uid://dkkti4sg4v785" path="res://sprites/tilemapfloor.png" id="1_ylhcx"]
-[ext_resource type="PackedScene" uid="uid://dov4nkfsf27hs" path="res://scenes/heart_collectible.tscn" id="2_3xi7r"]
+[ext_resource type="PackedScene" uid="uid://dov4nkfsf27hs" path="res://scenes/collectibles/heart_collectible.tscn" id="2_3xi7r"]
 [ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemy.tscn" id="4_xwwxj"]
 [ext_resource type="PackedScene" uid="uid://cinljgej7owpj" path="res://scenes/spikes.tscn" id="5_n5j7o"]
 [ext_resource type="PackedScene" uid="uid://caqkxr3u45dsp" path="res://scenes/door_closed.tscn" id="6_oiqyd"]
