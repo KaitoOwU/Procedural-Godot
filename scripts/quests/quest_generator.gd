@@ -10,7 +10,7 @@ var random = RandomNumberGenerator.new();
 
 func _ready() -> void:
 	read_item_dir()
-	current_quest = generate_quest()
+	#current_quest = generate_quest()
 
 func generate_quest() -> Array[Quest]:
 	var quest_list : Array[Quest] = []
@@ -56,7 +56,16 @@ func create_item_quest_from(list: Array[QuestItem]) -> Quest:
 
 func create_enemy_quest_from(list: Array[QuestEnemy]) -> Quest:
 	var element = list.pick_random()
-	var count = random.randi_range(1, 4)
+	var count = random.randi_range(1, 2)
 	
 	var quest = Quest.create(element, count)
 	return quest
+	
+func complete_objective(obj: QuestElement) -> bool:
+	for quest in current_quest:
+		if quest.element == obj:
+			quest.amount -= 1
+			if quest.amount <= 0:
+				current_quest.erase(quest)
+		continue
+	return current_quest.is_empty()

@@ -12,17 +12,16 @@
 atlas = ExtResource("5_c4w8v")
 region = Rect2(80, 112, 16, 16)
 
-[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("sprites", "attack_spawn_point")]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("sprites")]
 collision_mask = 3
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_nd4pc")
 attack_distance = 30.0
-sprites = [NodePath(""), NodePath("")]
+sprites = [NodePath("BodySprite")]
 default_movement = ExtResource("2_nnsly")
 stunned_movemement = ExtResource("3_vw1dg")
 attack_scene = ExtResource("2_mf8py")
-attack_spawn_point = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_p1d5c")
