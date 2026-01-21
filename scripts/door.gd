@@ -52,6 +52,7 @@ func try_unlock() -> void:
 		return
 
 	Player.Instance.key_count -= 1
+	PlayerVariables.trackedData.keyUsed +=1
 	set_state(STATE.OPEN)
 
 	var next_room = _room.get_adjacent_room(orientation, position)

@@ -45,6 +45,7 @@ func _set_state(state : STATE) -> void:
 		STATE.STUNNED:
 			_current_movement = stunned_movemement
 		STATE.DEAD:
+			PlayerVariables.trackedData.ennemiesKilled+=1 
 			_end_blink()
 			queue_free()
 		_:
@@ -61,3 +62,9 @@ func _update_state(delta : float) -> void:
 			if _state_timer >= attack_warm_up:
 				_spawn_attack_scene()
 				_set_state(STATE.IDLE)
+
+func _got_hit():
+	PlayerVariables.trackedData.timesEnnemiesGotHit += 1
+
+func _onAttack():
+	pass

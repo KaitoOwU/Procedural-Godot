@@ -26,6 +26,9 @@ func _process(delta: float) -> void:
 func enter_room(room : Room) -> void:
 	var previous = _room
 	_room = room
+	PlayerVariables.trackedData.roomEnteredOrder.append(room.name)
+	if previous :
+		PlayerVariables.trackedData.currentRoom = previous.name
 	_room.on_enter_room(previous)
 
 
@@ -60,6 +63,10 @@ func _update_inputs() -> void:
 	else:
 		_direction = Vector2.ZERO
 
+func _onAttack():
+	PlayerVariables.trackedData.attacks.number+= 1
+	var AttackNumber = PlayerVariables.trackedData.attacks.number
+	PlayerVariables.trackedData.attacks.hitRate =  float(PlayerVariables.trackedData.timesEnnemiesGotHit)/AttackNumber if AttackNumber!= 0 else 0
 
 func _set_state(state : STATE) -> void:
 	super(state)
@@ -83,3 +90,6 @@ func _update_state(_delta : float) -> void:
 		STATE.ATTACKING:
 			_spawn_attack_scene()
 			_set_state(STATE.IDLE)
+
+func _got_hit():
+	PlayerVariables.trackedData.timesPlayerGotHit += 1
