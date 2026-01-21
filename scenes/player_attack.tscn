@@ -77,10 +77,11 @@ knockback_speed = 300.0
 shape = SubResource("CircleShape2D_hb4ip")
 
 [node name="PivotPoint" type="Node2D" parent="."]
-rotation = 5.7526054
+rotation = 0.53232545
 
 [node name="Shovel" type="Sprite2D" parent="PivotPoint"]
 modulate = Color(0.82, 0.82, 0.82, 0)
+z_index = 20
 position = Vector2(0, -18)
 texture = ExtResource("2_pqjam")
 

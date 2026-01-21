@@ -8,6 +8,7 @@ var enemiesNumber : int
 func _ready() -> void:
 	enemiesNumber = 1
 	_spawnEnemiesInZone(enemyTileMap, enemiesNumber)
+	enemyTileMap.visible = false
 
 func _spawnEnemiesInZone(tilemap: TileMapLayer, n:int) -> void:
 	var enemyBase = preload("res://scenes/enemy.tscn")
