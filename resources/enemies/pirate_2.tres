@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="QuestEnemy" load_steps=2 format=3 uid="uid://cwbrmaw6vfra2"]
+[gd_resource type="Resource" script_class="QuestEnemy" load_steps=3 format=3 uid="uid://cwbrmaw6vfra2"]
 
 [ext_resource type="Script" uid="uid://cpsag54hle56n" path="res://scripts/quests/quest_enemy.gd" id="1_h350y"]
+[ext_resource type="PackedScene" uid="uid://b0ahenmxn2ain" path="res://scenes/enemy.tscn" id="1_kuom7"]
 
 [resource]
 script = ExtResource("1_h350y")
 name = "Pirate 2"
+sceneRef = ExtResource("1_kuom7")
 metadata/_custom_type_script = "uid://cpsag54hle56n"

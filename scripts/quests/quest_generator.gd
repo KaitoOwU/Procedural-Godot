@@ -39,7 +39,7 @@ func generate_quest() -> Array[Quest]:
 	return quest_list
 	
 func read_item_dir() -> void:
-	for res in ResourceLoader.list_directory("res://resources/items/"):
+	for res in ResourceLoader.list_directory("res://resources/collectibles/"):
 		collectible_list.append(load("res://resources/collectibles/" + res) as QuestCollectible)
 		
 	for res in ResourceLoader.list_directory("res://resources/enemies/"):
