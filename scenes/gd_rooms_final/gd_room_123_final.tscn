@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://cbu30rgg3o0gi"]
+[gd_scene load_steps=7 format=4 uid="uid://dwfaxmgq4ths3"]
 
 [ext_resource type="Script" uid="uid://du4m66ihgjwbx" path="res://scripts/room.gd" id="1_h86xu"]
 [ext_resource type="TileSet" uid="uid://v8cybi38e5c6" path="res://resources/tilesets/MonoPiratesTileSet.tres" id="2_j610g"]
