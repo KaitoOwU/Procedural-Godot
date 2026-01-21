@@ -1,8 +1,6 @@
 class_name Room extends Node2D
 
 @export var is_start_room : bool
-# Position of the room in index coordinates. Coordinates {0,0} are the coordinates of the central room. Room {1,0} is on the right side of room {0,0}.
-@export var room_pos : Vector2i = Vector2i.ZERO
 # Size of the room in index coordinates. By default : {1,1}.
 @export var room_size : Vector2i = Vector2i.ONE
 @export var tilemap_layers : Array[TileMapLayer]
@@ -11,8 +9,8 @@ static var all_rooms : Array[Room]
 
 var doors : Array[Door]
 
+@onready var _cam : CameraFollow = $"/root/game_scene/Camera2D"
 #@onready var _cam : CameraFollow = $"../Player/Camera2D"
-
 
 func _ready() -> void:
 	all_rooms.push_back(self)
@@ -52,21 +50,17 @@ func on_enter_room(from : Room) -> void:
 
 func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:
 	var dir : Vector2i = Utils.OrientationToDir(orientation)
-	var adjacent_pos : Vector2i = room_pos + dir + get_position_offset(from)
+	var adjacent_pos : Vector2 = from + (Vector2(dir.x, dir.y) * 160)
 
-	for room in all_rooms:
-		if is_room_adjacent(room, adjacent_pos):
-			return room
-			
+	for room in all_rooms.size():
+		if all_rooms[room].position == adjacent_pos:
+			return all_rooms[room]			
 	return null
 
 
 func is_room_adjacent(room : Room, adjacent_pos : Vector2) -> bool:
 	return (
-		adjacent_pos.x >= room.room_pos.x
-		&& adjacent_pos.y >= room.room_pos.y
-		&& adjacent_pos.x < room.room_pos.x + room.room_size.x
-		&& adjacent_pos.y < room.room_pos.y + room.room_size.y
+		room.position == adjacent_pos
 	)
 
 

@@ -25,6 +25,9 @@ enum STATE {IDLE, ATTACKING, STUNNED, DEAD}
 @export var attack_cooldown : float = 0.3
 @export var orientation : ORIENTATION = ORIENTATION.FREE
 
+@export_group("Other")
+@export var animator : AnimationPlayer
+
 # Life
 var _last_hit_time : float
 
@@ -42,7 +45,7 @@ var _state : STATE = STATE.IDLE
 var _is_blinking : bool
 
 # Dungeon position
-var _room #: Room
+var _room : Room
 
 @onready var main_sprite : Sprite2D = $"BodySprite"
 
@@ -61,9 +64,13 @@ func _physics_process(_delta: float) -> void:
 	if _can_move():
 		if _direction.length() > 0:
 			velocity = velocity.move_toward(_direction * _current_movement.speed_max, _current_movement.acceleration * _delta)
+			if animator != null:
+				animator.current_animation = "Player/PlayerMoveAnim"
 			#main_sprite.rotation = _compute_orientation_angle(_direction)
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, _current_movement.friction * _delta)
+			if animator != null:
+				animator.current_animation = "[stop]"
 	
 	# 3 Apply mouvement
 	move_and_slide()

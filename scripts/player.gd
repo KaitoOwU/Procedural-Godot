@@ -32,14 +32,16 @@ func enter_room(room : Room) -> void:
 func _update_room() -> void:
 	var room_bounds : Rect2 = _room.get_world_bounds()
 	var next_room : Room = null
+	var baseOffset : Vector2 =  Vector2(80,80)
+	
 	if position.x > room_bounds.end.x:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.EAST, position)
+		next_room = _room.get_adjacent_room(Utils.ORIENTATION.EAST, room_bounds.position + baseOffset)
 	elif position.x < room_bounds.position.x:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.WEST, position)
+		next_room = _room.get_adjacent_room(Utils.ORIENTATION.WEST, room_bounds.position + baseOffset)
 	elif position.y < room_bounds.position.y:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.NORTH, position)
+		next_room = _room.get_adjacent_room(Utils.ORIENTATION.NORTH, room_bounds.position + baseOffset)
 	elif position.y > room_bounds.end.y:
-		next_room = _room.get_adjacent_room(Utils.ORIENTATION.SOUTH, position)
+		next_room = _room.get_adjacent_room(Utils.ORIENTATION.SOUTH, room_bounds.position + baseOffset)
 
 	if next_room != null:
 		enter_room(next_room)
