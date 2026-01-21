@@ -5,6 +5,8 @@ static var all_enemies : Array[Enemy]
 @export var attack_warm_up : float = 0.5
 @export var attack_distance : float = 0.5
 
+var enemy_type : QuestEnemy
+
 var _state_timer : float = 0.0
 
 
@@ -46,6 +48,8 @@ func _set_state(state : STATE) -> void:
 		STATE.STUNNED:
 			_current_movement = stunned_movemement
 		STATE.DEAD:
+			QuestGenerator.complete_objective(enemy_type)
+			
 			PlayerVariables.trackedData.ennemiesKilled+=1 
 			_end_blink()
 			queue_free()

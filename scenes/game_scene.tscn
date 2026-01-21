@@ -1,10 +1,22 @@
-[gd_scene load_steps=6 format=4 uid="uid://cmn28gu0x4dl5"]
+[gd_scene load_steps=15 format=4 uid="uid://cmn28gu0x4dl5"]
 
 [ext_resource type="PackedScene" uid="uid://dj8pnsm1w06xj" path="res://scenes/gd_rooms_final/gd_room_16_final.tscn" id="1_bw6k5"]
+[ext_resource type="Texture2D" uid="uid://c17deffkwwua7" path="res://sprites/Dot Matrix/Tilemap/tilemap.png" id="2_tcjrq"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="2_ycayy"]
+[ext_resource type="Texture2D" uid="uid://dr5edtxj8jvt1" path="res://sprites/UI/NewQuestAvailable.png" id="3_rvs2r"]
+[ext_resource type="Script" uid="uid://g0dbxokmt80n" path="res://scripts/quests/quest_giver.gd" id="3_tqxxy"]
 [ext_resource type="Script" uid="uid://4eq20em80d1w" path="res://scripts/camera_follow.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://chso045indd0u" path="res://scenes/room_tree_generator.tscn" id="4_bw6k5"]
 [ext_resource type="TileSet" uid="uid://v8cybi38e5c6" path="res://resources/tilesets/MonoPiratesTileSet.tres" id="5_y3j0m"]
+[ext_resource type="Texture2D" uid="uid://cluv82qsi0i5v" path="res://sprites/UI/HealthBar.png" id="6_kk2rg"]
+[ext_resource type="Texture2D" uid="uid://pelakx3tae2s" path="res://sprites/UI/QuestUITopBottom.png" id="6_utbpp"]
+[ext_resource type="Texture2D" uid="uid://c4t3cp7xsjrmo" path="res://sprites/UI/HealthBarFilling.png" id="7_b5spy"]
+[ext_resource type="FontFile" uid="uid://b1houel3eybpx" path="res://sprites/UI/rainyhearts.ttf" id="7_mw25s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvs2r"]
+size = Vector2(49, 49)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rvs2r"]
 
 [node name="game_scene" type="Node2D"]
 
@@ -12,13 +24,116 @@
 position = Vector2(112, 112)
 is_start_room = true
 
-[node name="Player" parent="." instance=ExtResource("2_ycayy")]
+[node name="QuestGiver" type="Sprite2D" parent="-MainRoom-" node_paths=PackedStringArray("questAvailable", "collider")]
+position = Vector2(27, -28)
+texture = ExtResource("2_tcjrq")
+centered = false
+region_enabled = true
+region_rect = Rect2(136.93802, 118.94593, 14.142075, 16.791801)
+script = ExtResource("3_tqxxy")
+questAvailable = NodePath("Sprite2D")
+collider = NodePath("QuestGiver")
+
+[node name="Sprite2D" type="Sprite2D" parent="-MainRoom-/QuestGiver"]
+position = Vector2(6.999999, -7.9999986)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_rvs2r")
+
+[node name="QuestGiver" type="Area2D" parent="-MainRoom-/QuestGiver"]
+position = Vector2(7, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="-MainRoom-/QuestGiver/QuestGiver"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_rvs2r")
+
+[node name="Player" parent="." node_paths=PackedStringArray("healthBarFill") instance=ExtResource("2_ycayy")]
 position = Vector2(80, 95)
+healthBarFill = NodePath("../Camera2D/UI/HealthBar/HealthBarFill")
+life = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(80, 80)
 zoom = Vector2(3, 3)
 script = ExtResource("3_ycayy")
+
+[node name="UI" type="Control" parent="Camera2D"]
+z_index = 1000
+layout_mode = 3
+anchors_preset = 0
+offset_left = -192.0
+offset_top = -107.0
+offset_right = -192.0
+offset_bottom = -107.0
+
+[node name="HealthBar" type="TextureRect" parent="Camera2D/UI"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 25.0
+texture = ExtResource("6_kk2rg")
+
+[node name="HealthBarFill" type="Sprite2D" parent="Camera2D/UI/HealthBar"]
+modulate = Color(0.7058824, 0.6862745, 0.8627451, 1)
+position = Vector2(36, 10)
+texture = ExtResource("7_b5spy")
+region_enabled = true
+region_rect = Rect2(11.5, 0, 48.741, 20)
+
+[node name="QuestMenuTop" type="TextureRect" parent="Camera2D/UI"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 379.0
+offset_bottom = 35.0
+texture = ExtResource("6_utbpp")
+
+[node name="QuestMenuBottom" type="TextureRect" parent="Camera2D/UI/QuestMenuTop"]
+layout_mode = 0
+offset_left = 116.93878
+offset_top = 60.000004
+offset_right = 233.87756
+offset_bottom = 90.0
+rotation = 3.1415927
+texture = ExtResource("6_utbpp")
+
+[node name="QuestText" type="Label" parent="Camera2D/UI/QuestMenuTop"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 3.0
+offset_right = 92.0
+offset_bottom = 18.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.2901961, 0.2784314, 0.3882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08235294)
+theme_override_fonts/font = ExtResource("7_mw25s")
+theme_override_font_sizes/font_size = 16
+text = "Quêtes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/UI/QuestMenuTop/QuestText"]
+layout_mode = 0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = 128.0
+offset_bottom = 94.0
+
+[node name="LeftHidder" type="TextureRect" parent="Camera2D/UI"]
+modulate = Color(0.103743516, 0.10374353, 0.103743516, 1)
+layout_mode = 0
+offset_left = -21.0
+offset_right = 91.0
+offset_bottom = 215.0
+texture = SubResource("CanvasTexture_rvs2r")
+
+[node name="RightHidder" type="TextureRect" parent="Camera2D/UI/LeftHidder"]
+modulate = Color(0.103743516, 0.10374353, 0.103743516, 1)
+layout_mode = 0
+offset_left = 336.0
+offset_right = 448.0
+offset_bottom = 215.0
+texture = SubResource("CanvasTexture_rvs2r")
 
 [node name="room_tree_generator" parent="." instance=ExtResource("4_bw6k5")]
 

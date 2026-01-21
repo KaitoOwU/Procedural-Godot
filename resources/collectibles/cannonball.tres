@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("2_16jbj")
-name = "Boulet de Canon"
+name = "Bouteille"
 sceneRef = ExtResource("1_5rokv")
 metadata/_custom_type_script = "uid://bgggigv2q2wye"

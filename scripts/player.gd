@@ -5,6 +5,10 @@ static var Instance : Player
 @export_group("Input")
 @export_range (0.0, 1.0) var controller_dead_zone : float = 0.3
 
+@export var healthBarFill : Sprite2D
+
+var quest_giver_in_range : QuestGiver
+
 # Collectible
 var key_count : int
 
@@ -15,6 +19,7 @@ func _init() -> void:
 
 func _ready() -> void:
 	_set_state(STATE.IDLE)
+	healthBarFill.region_rect = Rect2(11.5, 0, 48.741, 20)
 
 
 func _process(delta: float) -> void:
@@ -93,3 +98,22 @@ func _update_state(_delta : float) -> void:
 
 func _got_hit():
 	PlayerVariables.trackedData.timesPlayerGotHit += 1
+
+func _input(event):
+	if event.is_action_pressed("Interact"):
+		var space_state = get_world_2d().direct_space_state
+	
+		# Créer les paramètres de requête
+		var query = PhysicsShapeQueryParameters2D.new()
+		query.collide_with_bodies = false
+		query.collide_with_areas = true
+		var shape = CircleShape2D.new()
+		shape.radius = 20
+		query.shape = shape
+		query.transform = self.transform
+		
+		var results = space_state.intersect_shape(query)
+		for result in results:
+			if(result.collider.get_parent() is QuestGiver):
+				(result.collider.get_parent() as QuestGiver).interact()
+				break
