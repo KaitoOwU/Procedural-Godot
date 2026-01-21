@@ -23,10 +23,9 @@ var occupied_tiles : Array[Vector2i]
 func _ready() -> void:
 	rooms_data_resource = rooms_data_node.rooms_data_resource
 	rooms_data_array = rooms_data_resource.room_datas
-
-	print ("🤨")
 	GenerateTree()
 	set_process_input(true) 
+	print ("🤨")
 
 	pass
 	

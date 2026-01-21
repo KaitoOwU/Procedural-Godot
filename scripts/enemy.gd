@@ -13,6 +13,7 @@ func _ready() -> void:
 	for room in Room.all_rooms:
 		if room.contains(global_position):
 			_room = room
+			print(_room)
 			break
 	_set_state(STATE.IDLE)
 
