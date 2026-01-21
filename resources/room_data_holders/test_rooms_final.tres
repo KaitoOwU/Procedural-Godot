@@ -1,0 +1,303 @@
+[gd_resource type="Resource" script_class="RoomDataHolder" load_steps=46 format=3 uid="uid://b17qc547nn0v2"]
+
+[ext_resource type="Script" uid="uid://brc1gejepqbip" path="res://scripts/resource_scripts/room_data.gd" id="1_fl3na"]
+[ext_resource type="Script" uid="uid://pkpdeofgn2xv" path="res://scripts/resource_scripts/room_data_holder.gd" id="2_ve6eo"]
+
+[sub_resource type="Resource" id="Resource_fl3na"]
+script = ExtResource("1_fl3na")
+id = 1
+had_door = 2
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ve6eo"]
+script = ExtResource("1_fl3na")
+id = 2
+had_door = 2
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_wi1qi"]
+script = ExtResource("1_fl3na")
+id = 3
+had_door = 6
+is_door_beach_type = 6
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_3d8i7"]
+script = ExtResource("1_fl3na")
+id = 4
+had_door = 12
+is_door_beach_type = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_4o2tu"]
+script = ExtResource("1_fl3na")
+id = 5
+had_door = 3
+is_door_beach_type = 3
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_lydvy"]
+script = ExtResource("1_fl3na")
+id = 6
+had_door = 11
+is_door_beach_type = 11
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_xpk4h"]
+script = ExtResource("1_fl3na")
+id = 7
+had_door = 13
+is_door_beach_type = 13
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_o0rsh"]
+script = ExtResource("1_fl3na")
+id = 8
+had_door = 15
+is_door_beach_type = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_aqqle"]
+script = ExtResource("1_fl3na")
+id = 9
+had_door = 1
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ww0iy"]
+script = ExtResource("1_fl3na")
+id = 10
+had_door = 15
+is_door_beach_type = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_usuot"]
+script = ExtResource("1_fl3na")
+id = 11
+had_door = 5
+is_door_beach_type = 5
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_rf26v"]
+script = ExtResource("1_fl3na")
+id = 12
+had_door = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_lp6lf"]
+script = ExtResource("1_fl3na")
+id = 13
+had_door = 7
+is_door_beach_type = 7
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_55qsj"]
+script = ExtResource("1_fl3na")
+id = 14
+had_door = 10
+is_door_beach_type = 10
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ub6wk"]
+script = ExtResource("1_fl3na")
+id = 15
+had_door = 8
+is_door_beach_type = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_flxip"]
+script = ExtResource("1_fl3na")
+id = 16
+had_door = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_kce3y"]
+script = ExtResource("1_fl3na")
+id = 17
+had_door = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_tegak"]
+script = ExtResource("1_fl3na")
+id = 18
+had_door = 10
+is_door_beach_type = 10
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_lje54"]
+script = ExtResource("1_fl3na")
+id = 19
+had_door = 5
+is_door_beach_type = 4
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_nobas"]
+script = ExtResource("1_fl3na")
+id = 20
+had_door = 15
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ylday"]
+script = ExtResource("1_fl3na")
+id = 21
+had_door = 7
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_2ptrh"]
+script = ExtResource("1_fl3na")
+id = 22
+had_door = 13
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_535cr"]
+script = ExtResource("1_fl3na")
+id = 23
+had_door = 15
+is_door_beach_type = 14
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_ttaqx"]
+script = ExtResource("1_fl3na")
+id = 24
+had_door = 6
+is_door_beach_type = 6
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_lf52j"]
+script = ExtResource("1_fl3na")
+id = 25
+had_door = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_s57mq"]
+script = ExtResource("1_fl3na")
+id = 26
+had_door = 3
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_3hs5m"]
+script = ExtResource("1_fl3na")
+id = 27
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_7whxg"]
+script = ExtResource("1_fl3na")
+id = 28
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_u22ur"]
+script = ExtResource("1_fl3na")
+id = 29
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_uutny"]
+script = ExtResource("1_fl3na")
+id = 30
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_xnk0y"]
+script = ExtResource("1_fl3na")
+id = 31
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_misjb"]
+script = ExtResource("1_fl3na")
+id = 32
+had_door = 11
+is_door_beach_type = 9
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_5gp1u"]
+script = ExtResource("1_fl3na")
+id = 33
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_1kne8"]
+script = ExtResource("1_fl3na")
+id = 34
+had_door = 11
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_5x76q"]
+script = ExtResource("1_fl3na")
+id = 35
+had_door = 3
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_dwmv1"]
+script = ExtResource("1_fl3na")
+id = 36
+had_door = 13
+is_door_beach_type = 5
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_mydut"]
+script = ExtResource("1_fl3na")
+id = 37
+had_door = 13
+is_door_beach_type = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_sppcu"]
+script = ExtResource("1_fl3na")
+id = 38
+had_door = 10
+is_door_beach_type = 8
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_e0fmy"]
+script = ExtResource("1_fl3na")
+id = 39
+had_door = 5
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_iwoqi"]
+script = ExtResource("1_fl3na")
+id = 40
+had_door = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_brxgj"]
+script = ExtResource("1_fl3na")
+id = 41
+had_door = 13
+is_door_beach_type = 12
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_jdxe8"]
+script = ExtResource("1_fl3na")
+id = 42
+had_door = 13
+is_door_beach_type = 1
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[sub_resource type="Resource" id="Resource_5ge24"]
+script = ExtResource("1_fl3na")
+id = 43
+had_door = 10
+is_door_beach_type = 2
+metadata/_custom_type_script = "uid://brc1gejepqbip"
+
+[resource]
+script = ExtResource("2_ve6eo")
+dead_end_rooms_indexs = Array[int]([0, 1, 8, 11, 14, 15, 16, 39])
+room_datas = Array[ExtResource("1_fl3na")]([SubResource("Resource_fl3na"), SubResource("Resource_ve6eo"), SubResource("Resource_wi1qi"), SubResource("Resource_3d8i7"), SubResource("Resource_4o2tu"), SubResource("Resource_lydvy"), SubResource("Resource_xpk4h"), SubResource("Resource_o0rsh"), SubResource("Resource_aqqle"), SubResource("Resource_ww0iy"), SubResource("Resource_usuot"), SubResource("Resource_rf26v"), SubResource("Resource_lp6lf"), SubResource("Resource_55qsj"), SubResource("Resource_ub6wk"), SubResource("Resource_flxip"), SubResource("Resource_kce3y"), SubResource("Resource_tegak"), SubResource("Resource_lje54"), SubResource("Resource_nobas"), SubResource("Resource_ylday"), SubResource("Resource_2ptrh"), SubResource("Resource_535cr"), SubResource("Resource_ttaqx"), SubResource("Resource_lf52j"), SubResource("Resource_s57mq"), SubResource("Resource_3hs5m"), SubResource("Resource_7whxg"), SubResource("Resource_u22ur"), SubResource("Resource_uutny"), SubResource("Resource_xnk0y"), SubResource("Resource_misjb"), SubResource("Resource_5gp1u"), SubResource("Resource_1kne8"), SubResource("Resource_5x76q"), SubResource("Resource_dwmv1"), SubResource("Resource_mydut"), SubResource("Resource_sppcu"), SubResource("Resource_e0fmy"), SubResource("Resource_iwoqi"), SubResource("Resource_brxgj"), SubResource("Resource_jdxe8"), SubResource("Resource_5ge24")])
+metadata/_custom_type_script = "uid://pkpdeofgn2xv"
