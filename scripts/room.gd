@@ -3,7 +3,7 @@ class_name Room extends Node2D
 @export var is_start_room : bool
 # Size of the room in index coordinates. By default : {1,1}.
 @export var room_size : Vector2i = Vector2i.ONE
-@export var tilemap_layers : Array[TileMapLayer]
+@onready var tilemap_layer : TileMapLayer = $TileMapLayer_FLOOR
 
 static var all_rooms : Array[Room]
 
@@ -19,15 +19,13 @@ func _ready() -> void:
 
 func get_local_bounds() -> Rect2:
 	var room_bounds = Rect2()
-	if tilemap_layers == null || tilemap_layers.size() == 0:
+	if tilemap_layer == null :
 		return room_bounds
-	## Encapsulate all tilemap_layers
-	for tilemap in tilemap_layers:
-		var bounds = tilemap.get_used_rect() # Gives rect in nb of tiles not pixels
-		var size_pixel = tilemap.tile_set.tile_size
-		bounds.position = Vector2i(bounds.position.x * size_pixel.x, bounds.position.y * size_pixel.y)
-		bounds.size = Vector2i(bounds.size.x * size_pixel.x, bounds.size.y * size_pixel.y)
-		room_bounds = room_bounds.merge(bounds)
+	var bounds = tilemap_layer.get_used_rect() # Gives rect in nb of tiles not pixels
+	var size_pixel = tilemap_layer.tile_set.tile_size
+	bounds.position = Vector2i(bounds.position.x * size_pixel.x, bounds.position.y * size_pixel.y)
+	bounds.size = Vector2i(bounds.size.x * size_pixel.x, bounds.size.y * size_pixel.y)
+	room_bounds = room_bounds.merge(bounds)
 	return room_bounds
 
 
