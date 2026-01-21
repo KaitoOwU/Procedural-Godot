@@ -15,9 +15,6 @@ func _ready() -> void:
 	for room in Room.all_rooms:
 		if room.isInRoom(global_position):			
 			_room = room
-			print("------------")
-			print("ENEMY : ", global_position)
-			print("ENEMY ROOM : ", _room.global_position)
 			break
 
 
@@ -31,9 +28,7 @@ func _exit_tree() -> void:
 
 
 func update_AI() -> void:
-	#print("PLAYER ROOM : ", Player.Instance._room.global_position)
 	if _can_move() && Player.Instance._room == _room:
-		print("PLAYER room : ", Player.Instance._room.global_position, "   ENEMY ROOM : ", _room.global_position)
 		var enemy_to_player = Player.Instance.global_position - global_position + Vector2(8,8)
 		if enemy_to_player.length() < attack_distance:
 			_attack()
