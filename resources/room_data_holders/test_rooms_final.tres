@@ -429,6 +429,7 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [sub_resource type="Resource" id="Resource_gj8h2"]
 script = ExtResource("1_fl3na")
+id = 63
 had_door = 15
 is_door_beach_type = 3
 metadata/_custom_type_script = "uid://brc1gejepqbip"
@@ -783,6 +784,8 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 [sub_resource type="Resource" id="Resource_x4aih"]
 script = ExtResource("1_fl3na")
 id = 115
+had_door = 13
+is_door_beach_type = 12
 metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [sub_resource type="Resource" id="Resource_t66xt"]
