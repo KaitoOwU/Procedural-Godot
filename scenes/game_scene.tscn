@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu3dydw7qyqnb"]
+[gd_scene load_steps=5 format=3 uid="uid://cmn28gu0x4dl5"]
 
 [ext_resource type="PackedScene" uid="uid://dj8pnsm1w06xj" path="res://scenes/gd_rooms_final/gd_room_16_final.tscn" id="1_bw6k5"]
 [ext_resource type="PackedScene" uid="uid://bib07te5reau7" path="res://scenes/player.tscn" id="2_ycayy"]
@@ -8,16 +8,15 @@
 [node name="game_scene" type="Node2D"]
 
 [node name="test_room_2" parent="." instance=ExtResource("1_bw6k5")]
-position = Vector2(113, 111)
+position = Vector2(112, 112)
 is_start_room = true
 
-[node name="Player" parent="." node_paths=PackedStringArray("sprites") instance=ExtResource("2_ycayy")]
+[node name="Player" parent="." instance=ExtResource("2_ycayy")]
 position = Vector2(80, 95)
-sprites = []
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(80, 80)
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 script = ExtResource("3_ycayy")
 
 [node name="room_tree_generator" parent="." instance=ExtResource("4_bw6k5")]
