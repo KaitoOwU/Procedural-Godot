@@ -8,6 +8,9 @@ enum door_position_tags_enum {
 	RIGHT = 1 << 3,
 }
 
+@export var max_tree_size : int = 20
+@export var min_tree_size : int = 10
+
 @onready var tile_map_layer : TileMapLayer = $TileMapLayer
 @onready var rooms_data_node : Node2D = $RoomsData
 
@@ -69,7 +72,7 @@ func GenerateTree() :
 	occupied_tiles.push_back(start_pos + Vector2i.UP)
 	var room_count : int = 0
 	
-	while tiles_to_fill.is_empty() != true && room_count < 20:
+	while tiles_to_fill.is_empty() != true && room_count < max_tree_size:
 		var tile = tiles_to_fill.pop_front()
 		#for tile in tiles_to_fill:
 			
@@ -121,10 +124,15 @@ func GenerateTree() :
 			occupied_tiles.append(new_tile.coords)
 			SpawnRoom(13, new_tile.coords)
 		
-		SpawnRoom(chosen_room.id, tile.coords)
-		room_count += 1
-		
-		await get_tree().create_timer(1.0).timeout
+		if tiles_to_fill.is_empty() && room_count < min_tree_size:
+			tiles_to_fill.push_back(tile)
+			pass
+		else :
+			SpawnRoom(chosen_room.id, tile.coords)
+			room_count += 1
+			pass
+		#for debugging
+		#await get_tree().create_timer(1.0).timeout
 
 		pass
 	pass
