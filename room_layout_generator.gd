@@ -132,7 +132,7 @@ func GenerateTree() :
 			room_count += 1
 			pass
 		#for debugging
-		#await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(1.0).timeout
 
 		pass
 	pass
