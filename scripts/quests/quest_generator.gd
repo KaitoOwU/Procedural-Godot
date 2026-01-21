@@ -1,7 +1,7 @@
 class_name quest_generator extends Node
 
 var objective : Array[String] = ["COLLECT", "KILL"]
-var item_list : Array[QuestItem]
+var collectible_list : Array[QuestCollectible]
 var enemy_list : Array[QuestEnemy]
 
 var current_quest : Array[Quest]
@@ -16,7 +16,7 @@ func generate_quest() -> Array[Quest]:
 	var quest_list : Array[Quest] = []
 	
 	var t_objective = objective
-	var t_item_list = item_list
+	var t_collectible_list = collectible_list
 	var t_enemy_list = enemy_list
 	
 	var amount_objectives = random.randi_range(1, 4)
@@ -25,8 +25,8 @@ func generate_quest() -> Array[Quest]:
 		var current_obj = t_objective.pick_random()
 		match current_obj:
 			"COLLECT":
-				var quest = create_item_quest_from(t_item_list)
-				t_item_list.erase(quest.element as QuestItem)
+				var quest = create_item_quest_from(t_collectible_list)
+				t_collectible_list.erase(quest.element as QuestCollectible)
 				quest_list.append(quest)
 				
 			"KILL":
@@ -39,14 +39,14 @@ func generate_quest() -> Array[Quest]:
 	return quest_list
 	
 func read_item_dir() -> void:
-	for res in ResourceLoader.list_directory("res://resources/items/"):
-		item_list.append(load("res://resources/items/" + res) as QuestItem)
+	for res in ResourceLoader.list_directory("res://resources/collectibles/"):
+		collectible_list.append(load("res://resources/collectibles/" + res) as QuestCollectible)
 		
 	for res in ResourceLoader.list_directory("res://resources/enemies/"):
 		enemy_list.append(load("res://resources/enemies/" + res) as QuestEnemy)
 		
 		
-func create_item_quest_from(list: Array[QuestItem]) -> Quest:
+func create_item_quest_from(list: Array[QuestCollectible]) -> Quest:
 	var element = list.pick_random()
 	var count = random.randi_range(1, 4)
 	

@@ -78,13 +78,12 @@ _data = {
 &"PlayerMoveAnim": SubResource("Animation_fjrip")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprites", "animator")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animator")]
 collision_mask = 5
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_ups2j")
 dead_color = Color(0.413595, 0.399579, 0.385991, 1)
-sprites = [NodePath("BodySprite")]
 default_movement = ExtResource("2_ay78m")
 stunned_movemement = ExtResource("3_8ktro")
 attack_scene = ExtResource("4_u74pk")

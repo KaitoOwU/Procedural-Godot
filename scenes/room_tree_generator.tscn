@@ -1,11 +1,102 @@
-[gd_scene load_steps=7 format=3 uid="uid://chso045indd0u"]
+[gd_scene load_steps=51 format=3 uid="uid://chso045indd0u"]
 
 [ext_resource type="Script" uid="uid://bupauncyrdg3t" path="res://room_layout_generator.gd" id="1_6nvwu"]
 [ext_resource type="TileSet" uid="uid://v8cybi38e5c6" path="res://resources/tilesets/MonoPiratesTileSet.tres" id="2_ceuvr"]
-[ext_resource type="TileSet" uid="uid://b3ge8mk0di6hw" path="res://resources/tilesets/room_tile_set.tres" id="2_sad45"]
+[ext_resource type="PackedScene" uid="uid://b8ajsm4k3tbe2" path="res://scenes/gd_rooms_final/gd_room_1_final.tscn" id="3_7vjgd"]
 [ext_resource type="Script" uid="uid://b45svathinxwi" path="res://scenes/rooms_data.gd" id="4_dx4e8"]
-[ext_resource type="Resource" uid="uid://pilhf3isx1lk" path="res://resources/room_data_holders/test_rooms_data1.tres" id="5_1cimx"]
-[ext_resource type="Script" path="res://scenes/character_body_2d.gd" id="6_5x01q"]
+[ext_resource type="PackedScene" uid="uid://bworoyjvlxn00" path="res://scenes/gd_rooms_final/gd_room_10_final.tscn" id="4_y440w"]
+[ext_resource type="PackedScene" uid="uid://c1ba4duatgo8r" path="res://scenes/gd_rooms_final/gd_room_11_final.tscn" id="5_aw8ta"]
+[ext_resource type="Script" uid="uid://br7b0vg5vo06v" path="res://scenes/character_body_2d.gd" id="6_5x01q"]
+[ext_resource type="PackedScene" uid="uid://2fsb74ttnb04" path="res://scenes/gd_rooms_final/gd_room_12_final.tscn" id="6_dgjdb"]
+[ext_resource type="PackedScene" uid="uid://dd8dfjfa21v0q" path="res://scenes/gd_rooms_final/gd_room_13_final.tscn" id="7_syk0b"]
+[ext_resource type="PackedScene" uid="uid://dp7vu31vf1qta" path="res://scenes/gd_rooms_final/gd_room_14_final.tscn" id="8_0n6ei"]
+[ext_resource type="PackedScene" uid="uid://cwv8n4qq1355d" path="res://scenes/gd_rooms_final/gd_room_15_final.tscn" id="9_y40nb"]
+[ext_resource type="PackedScene" uid="uid://dj8pnsm1w06xj" path="res://scenes/gd_rooms_final/gd_room_16_final.tscn" id="10_bxci4"]
+[ext_resource type="PackedScene" uid="uid://clx6u8neref5g" path="res://scenes/gd_rooms_final/gd_room_17_final.tscn" id="11_0875k"]
+[ext_resource type="PackedScene" uid="uid://bvrukcstxrcta" path="res://scenes/gd_rooms_final/gd_room_18_final.tscn" id="12_dbm4p"]
+[ext_resource type="PackedScene" uid="uid://bisoa7atf3ad3" path="res://scenes/gd_rooms_final/gd_room_19_final.tscn" id="13_7xhha"]
+[ext_resource type="PackedScene" uid="uid://cdpb5pggic3ab" path="res://scenes/gd_rooms_final/gd_room_2_final.tscn" id="14_nisnu"]
+[ext_resource type="PackedScene" uid="uid://b7b5eod2dv54a" path="res://scenes/gd_rooms_final/gd_room_20_final.tscn" id="15_hnfoo"]
+[ext_resource type="PackedScene" uid="uid://dr4o6hj1khhgl" path="res://scenes/gd_rooms_final/gd_room_21_final.tscn" id="16_0170x"]
+[ext_resource type="PackedScene" uid="uid://d0k6xckrnhx73" path="res://scenes/gd_rooms_final/gd_room_22_final.tscn" id="17_j6tgg"]
+[ext_resource type="PackedScene" uid="uid://6jh2qdc1g8v1" path="res://scenes/gd_rooms_final/gd_room_23_final.tscn" id="18_2pst4"]
+[ext_resource type="PackedScene" uid="uid://c0hc1m58rhijr" path="res://scenes/gd_rooms_final/gd_room_24_final.tscn" id="19_8c8tu"]
+[ext_resource type="PackedScene" uid="uid://dllh0orgru0n6" path="res://scenes/gd_rooms_final/gd_room_25_final.tscn" id="20_f4ow4"]
+[ext_resource type="PackedScene" uid="uid://c7xhw5ihylale" path="res://scenes/gd_rooms_final/gd_room_26_final.tscn" id="21_ysde4"]
+[ext_resource type="PackedScene" uid="uid://cbburx1jn8tsp" path="res://scenes/gd_rooms_final/gd_room_27_final.tscn" id="22_l7tym"]
+[ext_resource type="PackedScene" uid="uid://drc1nyh7u7fmm" path="res://scenes/gd_rooms_final/gd_room_28_final.tscn" id="23_x6a4o"]
+[ext_resource type="PackedScene" uid="uid://bvpxoktjeyk0n" path="res://scenes/gd_rooms_final/gd_room_29_final.tscn" id="24_boqa4"]
+[ext_resource type="PackedScene" uid="uid://dify2j4whw8wd" path="res://scenes/gd_rooms_final/gd_room_3_final.tscn" id="25_thye1"]
+[ext_resource type="PackedScene" uid="uid://b3eybpgvy8x4g" path="res://scenes/gd_rooms_final/gd_room_30_final.tscn" id="26_wyheb"]
+[ext_resource type="PackedScene" uid="uid://bctholqcbnsvj" path="res://scenes/gd_rooms_final/gd_room_31_final.tscn" id="27_7q1kv"]
+[ext_resource type="PackedScene" uid="uid://8q3c7df47mml" path="res://scenes/gd_rooms_final/gd_room_32_final.tscn" id="28_vwjq8"]
+[ext_resource type="PackedScene" uid="uid://c7wgl7304h0nc" path="res://scenes/gd_rooms_final/gd_room_33_final.tscn" id="29_sibap"]
+[ext_resource type="PackedScene" uid="uid://3fwppqagmakq" path="res://scenes/gd_rooms_final/gd_room_34_final.tscn" id="30_j4lhe"]
+[ext_resource type="PackedScene" uid="uid://knrvb30svb5s" path="res://scenes/gd_rooms_final/gd_room_35_final.tscn" id="31_j3vt7"]
+[ext_resource type="PackedScene" uid="uid://c2tau8wp4vrga" path="res://scenes/gd_rooms_final/gd_room_36_final.tscn" id="32_scsuw"]
+[ext_resource type="PackedScene" uid="uid://d08opp450va5r" path="res://scenes/gd_rooms_final/gd_room_37_final.tscn" id="33_83ibu"]
+[ext_resource type="PackedScene" uid="uid://b3krne4jxeasl" path="res://scenes/gd_rooms_final/gd_room_38_final.tscn" id="34_etnqi"]
+[ext_resource type="PackedScene" uid="uid://bmde2yqnjs3p5" path="res://scenes/gd_rooms_final/gd_room_39_final.tscn" id="35_5ih02"]
+[ext_resource type="PackedScene" uid="uid://cgovybotyf1k4" path="res://scenes/gd_rooms_final/gd_room_4_final.tscn" id="36_exq8j"]
+[ext_resource type="PackedScene" uid="uid://6flfktbnygu" path="res://scenes/gd_rooms_final/gd_room_40_final.tscn" id="37_ruuii"]
+[ext_resource type="PackedScene" uid="uid://bya4k6i8rmojk" path="res://scenes/gd_rooms_final/gd_room_41_final.tscn" id="38_u1n3h"]
+[ext_resource type="PackedScene" uid="uid://vc5kxrw0dtpd" path="res://scenes/gd_rooms_final/gd_room_42_final.tscn" id="39_8knnb"]
+[ext_resource type="PackedScene" uid="uid://c1xnaa6tpv03r" path="res://scenes/gd_rooms_final/gd_room_43_final.tscn" id="40_uxd5e"]
+[ext_resource type="PackedScene" uid="uid://ex672bbdehd7" path="res://scenes/gd_rooms_final/gd_room_5_final.tscn" id="41_lia46"]
+[ext_resource type="PackedScene" uid="uid://srf72t5ovfgm" path="res://scenes/gd_rooms_final/gd_room_6_final.tscn" id="42_4fv5n"]
+[ext_resource type="PackedScene" uid="uid://c8khr8686dwth" path="res://scenes/gd_rooms_final/gd_room_7_final.tscn" id="43_g83se"]
+[ext_resource type="PackedScene" uid="uid://6oks7j7ijjuh" path="res://scenes/gd_rooms_final/gd_room_8_final.tscn" id="44_x515o"]
+[ext_resource type="PackedScene" uid="uid://cqsxnlhgqpn84" path="res://scenes/gd_rooms_final/gd_room_9_final.tscn" id="45_avo0q"]
+[ext_resource type="Resource" uid="uid://b17qc547nn0v2" path="res://resources/room_data_holders/test_rooms_final.tres" id="47_7vjgd"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_7vjgd"]
+scenes/1/scene = ExtResource("3_7vjgd")
+scenes/2/scene = ExtResource("14_nisnu")
+scenes/3/scene = ExtResource("25_thye1")
+scenes/4/scene = ExtResource("36_exq8j")
+scenes/5/scene = ExtResource("41_lia46")
+scenes/6/scene = ExtResource("42_4fv5n")
+scenes/7/scene = ExtResource("43_g83se")
+scenes/8/scene = ExtResource("44_x515o")
+scenes/9/scene = ExtResource("45_avo0q")
+scenes/10/scene = ExtResource("4_y440w")
+scenes/11/scene = ExtResource("5_aw8ta")
+scenes/12/scene = ExtResource("6_dgjdb")
+scenes/13/scene = ExtResource("7_syk0b")
+scenes/14/scene = ExtResource("8_0n6ei")
+scenes/15/scene = ExtResource("9_y40nb")
+scenes/16/scene = ExtResource("10_bxci4")
+scenes/17/scene = ExtResource("11_0875k")
+scenes/18/scene = ExtResource("12_dbm4p")
+scenes/19/scene = ExtResource("13_7xhha")
+scenes/20/scene = ExtResource("15_hnfoo")
+scenes/21/scene = ExtResource("16_0170x")
+scenes/22/scene = ExtResource("17_j6tgg")
+scenes/23/scene = ExtResource("18_2pst4")
+scenes/24/scene = ExtResource("19_8c8tu")
+scenes/25/scene = ExtResource("20_f4ow4")
+scenes/26/scene = ExtResource("21_ysde4")
+scenes/27/scene = ExtResource("22_l7tym")
+scenes/28/scene = ExtResource("23_x6a4o")
+scenes/29/scene = ExtResource("24_boqa4")
+scenes/30/scene = ExtResource("26_wyheb")
+scenes/31/scene = ExtResource("27_7q1kv")
+scenes/32/scene = ExtResource("28_vwjq8")
+scenes/33/scene = ExtResource("29_sibap")
+scenes/34/scene = ExtResource("30_j4lhe")
+scenes/35/scene = ExtResource("31_j3vt7")
+scenes/36/scene = ExtResource("32_scsuw")
+scenes/37/scene = ExtResource("33_83ibu")
+scenes/38/scene = ExtResource("34_etnqi")
+scenes/39/scene = ExtResource("35_5ih02")
+scenes/40/scene = ExtResource("37_ruuii")
+scenes/41/scene = ExtResource("38_u1n3h")
+scenes/42/scene = ExtResource("39_8knnb")
+scenes/43/scene = ExtResource("40_uxd5e")
+
+[sub_resource type="TileSet" id="TileSet_y440w"]
+tile_size = Vector2i(224, 224)
+sources/0 = SubResource("TileSetScenesCollectionSource_7vjgd")
 
 [node name="room_tree_generator" type="Node2D"]
 script = ExtResource("1_6nvwu")
@@ -14,13 +105,13 @@ script = ExtResource("1_6nvwu")
 tile_set = ExtResource("2_ceuvr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = ExtResource("2_sad45")
+tile_set = SubResource("TileSet_y440w")
 rendering_quadrant_size = 160
 physics_quadrant_size = 160
 
 [node name="RoomsData" type="Node2D" parent="."]
 script = ExtResource("4_dx4e8")
-rooms_data_resource = ExtResource("5_1cimx")
+rooms_data_resource = ExtResource("47_7vjgd")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 motion_mode = 1

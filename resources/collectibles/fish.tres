@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestCollectible" load_steps=3 format=3 uid="uid://ccm43otaldtcx"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_collectible.gd" id="1_ln28y"]
+[ext_resource type="PackedScene" uid="uid://dghsfjc7v7y2g" path="res://scenes/collectibles/fish_collectible.tscn" id="1_nuhix"]
+
+[resource]
+script = ExtResource("1_ln28y")
+name = "Poisson"
+sceneRef = ExtResource("1_nuhix")
+metadata/_custom_type_script = "uid://bgggigv2q2wye"

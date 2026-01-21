@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestCollectible" load_steps=3 format=3 uid="uid://c84jcd56wj71"]
+
+[ext_resource type="PackedScene" uid="uid://cu11t50v4gk1a" path="res://scenes/collectibles/cannonball_collectible.tscn" id="1_5rokv"]
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_collectible.gd" id="2_16jbj"]
+
+[resource]
+script = ExtResource("2_16jbj")
+name = "Boulet de Canon"
+sceneRef = ExtResource("1_5rokv")
+metadata/_custom_type_script = "uid://bgggigv2q2wye"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestCollectible" load_steps=3 format=3 uid="uid://cus55xiqeak3l"]
+
+[ext_resource type="Script" uid="uid://bgggigv2q2wye" path="res://scripts/quests/quest_collectible.gd" id="1_8wart"]
+[ext_resource type="PackedScene" uid="uid://mochyaouh7fa" path="res://scenes/collectibles/rock_collectible.tscn" id="1_tj5c7"]
+
+[resource]
+script = ExtResource("1_8wart")
+name = "Pierre"
+sceneRef = ExtResource("1_tj5c7")
+metadata/_custom_type_script = "uid://bgggigv2q2wye"
