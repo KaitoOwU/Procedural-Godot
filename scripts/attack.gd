@@ -14,7 +14,8 @@ class_name Attack extends Area2D
 var attack_owner : Node
 
 func _ready() -> void:
-	animator.current_animation = "ShovelTurn"
+	if animator != null:
+		animator.current_animation = "ShovelTurn"
 
 
 func _process(delta: float) -> void:
