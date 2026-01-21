@@ -38,7 +38,16 @@ func get_world_bounds() -> Rect2:
 func contains(point : Vector2) -> bool:
 	var bounds = get_world_bounds()
 	return bounds.has_point(point)
-
+	
+func isInRoom(pos : Vector2) -> bool:
+	var x1 = global_position.x
+	var y1 = global_position.y
+	var x2 = x1 + 224
+	var y2 = y1 + 224
+	if (x1 <= pos.x and pos.x < x2):
+		if (y1 <= pos.y and pos.y < y2):
+			return true
+	return false
 
 func on_enter_room(from : Room) -> void:
 	var camera_bounds = get_world_bounds()

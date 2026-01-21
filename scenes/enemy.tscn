@@ -26,7 +26,6 @@ attack_scene = ExtResource("2_mf8py")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
 shape = SubResource("CircleShape2D_p1d5c")
-disabled = true
 
 [node name="BodySprite" type="Sprite2D" parent="."]
 modulate = Color(1, 0.65999997, 0.93766665, 1)

@@ -10,11 +10,15 @@ var _state_timer : float = 0.0
 
 func _ready() -> void:
 	all_enemies.push_back(self)
-	for room in Room.all_rooms:
-		if room.contains(global_position):
-			_room = room
-			break
 	_set_state(STATE.IDLE)
+	await get_tree().create_timer(0.1).timeout # wait for other generations
+	for room in Room.all_rooms:
+		if room.isInRoom(global_position):			
+			_room = room
+			print("------------")
+			print("ENEMY : ", global_position)
+			print("ENEMY ROOM : ", _room.global_position)
+			break
 
 
 func _process(delta: float) -> void:
@@ -27,16 +31,16 @@ func _exit_tree() -> void:
 
 
 func update_AI() -> void:
-	_direction = Vector2.ZERO
-	
-	#if _can_move() && Player.Instance._room == _room:
-		#var enemy_to_player = Player.Instance.global_position - global_position
-		#if enemy_to_player.length() < attack_distance:
-			#_attack()
-		#else:
-			#_direction = enemy_to_player.normalized()
-	#else:
-		#_direction = Vector2.ZERO
+	#print("PLAYER ROOM : ", Player.Instance._room.global_position)
+	if _can_move() && Player.Instance._room == _room:
+		print("PLAYER room : ", Player.Instance._room.global_position, "   ENEMY ROOM : ", _room.global_position)
+		var enemy_to_player = Player.Instance.global_position - global_position + Vector2(8,8)
+		if enemy_to_player.length() < attack_distance:
+			_attack()
+		else:
+			_direction = enemy_to_player.normalized()
+	else:
+		_direction = Vector2.ZERO
 
 
 func _set_state(state : STATE) -> void:

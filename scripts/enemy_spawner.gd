@@ -29,21 +29,21 @@ func _spawnEntitiesInZone() -> void:
 	for t in enemiesNumber:
 		if waterTiles.size() == 0:
 			return
-		var enemyBase = QuestGenerator.enemy_list.pick_random().sceneRef		
+		var enemyBase = QuestGenerator.enemy_list.pick_random().sceneRef
 		var obj = enemyBase.instantiate()
 		add_child(obj)
-		obj.position = Vector2(waterTiles[0].x, waterTiles[0].y) * 16 + room.global_position	
+		obj.position = Vector2(waterTiles[0].x, waterTiles[0].y) * 16 + room.global_position
 		waterTiles.remove_at(0)
 		
 	for t in collectiblesNumber:
 		if sandTiles.size() == 0:
 			return
-		var collectibleBase = QuestGenerator.collectible_list.pick_random().sceneRef			
+		var collectibleBase = QuestGenerator.collectible_list.pick_random().sceneRef
 		var obj = collectibleBase.instantiate()
 		add_child(obj)
 		obj.position = Vector2(sandTiles[t].x, sandTiles[t].y) * 16 + room.global_position	+ Vector2(8, 8)
 		sandTiles.remove_at(0)
-		
+
 
 func _parseTileMap(tilemap: TileMapLayer)-> void :
 	var allTiles = tilemap.get_used_cells()

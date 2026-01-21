@@ -17,7 +17,7 @@ position = Vector2(80, 95)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(80, 80)
-zoom = Vector2(3, 3)
+zoom = Vector2(0.495, 0.495)
 script = ExtResource("3_ycayy")
 
 [node name="room_tree_generator" parent="." instance=ExtResource("4_bw6k5")]
