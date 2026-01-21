@@ -70,7 +70,7 @@ func _physics_process(_delta: float) -> void:
 		else:
 			velocity = velocity.move_toward(Vector2.ZERO, _current_movement.friction * _delta)
 			if animator != null:
-				animator.current_animation = "[stop]"
+				animator.current_animation = "RESET"
 	
 	# 3 Apply mouvement
 	move_and_slide()
@@ -190,7 +190,7 @@ func _spawn_attack_scene() -> void:
 	var spawn_position = attack_spawn_point.global_position if attack_spawn_point != null else global_position
 	var spawn_rotation = attack_spawn_point.global_rotation if attack_spawn_point != null else global_rotation
 	var spawned_attack = attack_scene.instantiate() as Attack
-	get_tree().root.add_child(spawned_attack)
+	add_child(spawned_attack)
 	spawned_attack.global_position = spawn_position
 	spawned_attack.global_rotation = spawn_rotation
 	spawned_attack.attack_owner = self
