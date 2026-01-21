@@ -35,7 +35,7 @@ func enter_room(room : Room) -> void:
 func _update_room() -> void:
 	var room_bounds : Rect2 = _room.get_world_bounds()
 	var next_room : Room = null
-	var baseOffset : Vector2 =  Vector2(80,80)
+	var baseOffset : Vector2 =  Vector2(0,0)
 	
 	if position.x > room_bounds.end.x:
 		next_room = _room.get_adjacent_room(Utils.ORIENTATION.EAST, room_bounds.position + baseOffset)

@@ -48,7 +48,7 @@ func on_enter_room(from : Room) -> void:
 
 func get_adjacent_room(orientation : Utils.ORIENTATION, from : Vector2) -> Room:
 	var dir : Vector2i = Utils.OrientationToDir(orientation)
-	var adjacent_pos : Vector2 = from + (Vector2(dir.x, dir.y) * 160)
+	var adjacent_pos : Vector2 = from + (Vector2(dir.x, dir.y) * 224)
 
 	for room in all_rooms.size():
 		if all_rooms[room].position == adjacent_pos:
