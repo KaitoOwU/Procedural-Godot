@@ -67,8 +67,10 @@ func _set_state(state : STATE) -> void:
 		STATE.STUNNED:
 			_current_movement = stunned_movemement
 		STATE.DEAD:
+			print ("I'm Dead")
 			_end_blink()
 			_set_color(dead_color)
+			get_tree().reload_current_scene()
 		_:
 			_current_movement = default_movement
 
