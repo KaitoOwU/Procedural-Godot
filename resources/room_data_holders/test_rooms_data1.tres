@@ -142,7 +142,7 @@ metadata/_custom_type_script = "uid://brc1gejepqbip"
 script = ExtResource("1_p5ntr")
 id = 23
 had_door = 3
-is_door_beach_type = 1
+is_door_beach_type = 3
 metadata/_custom_type_script = "uid://brc1gejepqbip"
 
 [sub_resource type="Resource" id="Resource_615jl"]

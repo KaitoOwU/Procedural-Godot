@@ -8,6 +8,9 @@ enum door_position_tags_enum {
 	RIGHT = 1 << 3,
 }
 
+@export var max_rooms : int = 20
+@export var minimum_rooms : int = 10
+
 @onready var tile_map_layer : TileMapLayer = $TileMapLayer
 @onready var rooms_data_node : Node2D = $RoomsData
 
@@ -124,7 +127,7 @@ func GenerateTree() :
 		SpawnRoom(chosen_room.id, tile.coords)
 		room_count += 1
 		
-		await get_tree().create_timer(1.0).timeout
+		#await get_tree().create_timer(1.0).timeout
 
 		pass
 	pass
