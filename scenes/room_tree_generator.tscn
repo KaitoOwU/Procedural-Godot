@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bupauncyrdg3t" path="res://room_layout_generator.gd" id="1_6nvwu"]
 [ext_resource type="TileSet" uid="uid://v8cybi38e5c6" path="res://resources/tilesets/MonoPiratesTileSet.tres" id="2_ceuvr"]
-[ext_resource type="TileSet" uid="uid://b3ge8mk0di6hw" path="res://resources/tilesets/room_tile_set.tres" id="2_sad45"]
+[ext_resource type="TileSet" uid="uid://dl08rmey0bay4" path="res://resources/tilesets/room_tile_set_final.tres" id="3_5x01q"]
 [ext_resource type="Script" uid="uid://b45svathinxwi" path="res://scenes/rooms_data.gd" id="4_dx4e8"]
 [ext_resource type="Resource" uid="uid://pilhf3isx1lk" path="res://resources/room_data_holders/test_rooms_data1.tres" id="5_1cimx"]
 [ext_resource type="Script" uid="uid://br7b0vg5vo06v" path="res://scenes/character_body_2d.gd" id="6_5x01q"]
@@ -14,7 +14,7 @@ script = ExtResource("1_6nvwu")
 tile_set = ExtResource("2_ceuvr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = ExtResource("2_sad45")
+tile_set = ExtResource("3_5x01q")
 rendering_quadrant_size = 160
 physics_quadrant_size = 160
 
